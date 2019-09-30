@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Widok="clr-namespace:Dzielnik.Widok.SelektorSzablonuKomorki">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="SzablonyKomorek/KomorkaImienia.xaml"/>
+        <ResourceDictionary Source="SzablonyKomorek/KomorkaKwotyNaleznej.xaml"/>
+        <ResourceDictionary Source="SzablonyKomorek/KomorkaKwotyWejsciowej.xaml"/>
+        <ResourceDictionary Source="SzablonyKomorek/KomorkaWejsciowaImienia.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Widok:SelektorSzablonuKomorki x:Key="SelektorSzablonuKomorki"
+                                   SzablonKomorkiImienia="{StaticResource KomorkaImienia}"
+                                   SzablonKomorkiKwotyNaleznej="{StaticResource KomorkaKwotyNaleznej}"
+                                   SzablonKomorkiKwotyWejsciowej="{StaticResource KomorkaKwotyWejsciowej}"
+                                   SzablonKomorkiWejsciowejImienia="{StaticResource KomorkaWejsciowaImienia}"/>
+
+</ResourceDictionary>

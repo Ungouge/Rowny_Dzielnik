@@ -1,9 +1,10 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
     
     <ResourceDictionary.MergedDictionaries>
-        
+
+        <ResourceDictionary Source="SelektorSzablonuKomorki/SelektorSzablonuKomorki.xaml"/>
         <ResourceDictionary Source="Widok.xaml"/>
-        
-    </ResourceDictionary.MergedDictionaries>
-    
-</ResourceDictionary>
+
+    </ResourceDictionary.MergedDictionaries> 
+
+</ResourceDictionary> 

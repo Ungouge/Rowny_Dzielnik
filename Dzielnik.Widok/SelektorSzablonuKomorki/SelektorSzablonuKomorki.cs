@@ -10,7 +10,7 @@ namespace Dzielnik.Widok.SelektorSzablonuKomorki
         public DataTemplate SzablonKomorkiWejsciowejImienia { get; set; }
         public DataTemplate SzablonKomorkiKwotyWejsciowej { get; set; }
         public DataTemplate SzablonKomorkiImienia { get; set; }
-        public DataTemplate SzablonKomorkiWyjsciowej { get; set; }
+        public DataTemplate SzablonKomorkiKwotyNaleznej { get; set; }
 
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
@@ -24,8 +24,8 @@ namespace Dzielnik.Widok.SelektorSzablonuKomorki
                             return SzablonKomorkiKwotyWejsciowej;
                         case IKomorkaImienia komorkaImienia:
                             return SzablonKomorkiImienia;
-                        case IKomorkaWyjsciowa komorkaWyjsciowa:
-                            return SzablonKomorkiWyjsciowej; 
+                        case IKomorkaKwotyNaleznej komorkaKwotyNaleznej:
+                            return SzablonKomorkiKwotyNaleznej; 
                     }
 
             return null;

@@ -48,21 +48,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelektorSzablonuKomorki\SelektorSzablonuKomorki.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="KomorkaImienia.xaml">
+    <Page Include="SelektorSzablonuKomorki\SelektorSzablonuKomorki.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="KomorkaWejsciowaImienia.xaml">
+    <Page Include="SelektorSzablonuKomorki\SzablonyKomorek\KomorkaImienia.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="KomorkaKwotyWejsciowej.xaml">
+    <Page Include="SelektorSzablonuKomorki\SzablonyKomorek\KomorkaWejsciowaImienia.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="KomorkaKwotyNaleznej.xaml">
+    <Page Include="SelektorSzablonuKomorki\SzablonyKomorek\KomorkaKwotyWejsciowej.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelektorSzablonuKomorki\SzablonyKomorek\KomorkaKwotyNaleznej.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
