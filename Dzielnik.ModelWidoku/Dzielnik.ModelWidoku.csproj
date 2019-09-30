@@ -41,6 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Implementacje\Komorka\KomorkaKwotyWejsciowej.cs" />
+    <Compile Include="Implementacje\Komorka\KomorkaImienia.cs" />
+    <Compile Include="Implementacje\Komorka\KomorkaKwotyNaleznej.cs" />
+    <Compile Include="Implementacje\Komorka\KomorkaWejsciowaImienia.cs" />
+    <Compile Include="public Interfaces\Komorka\IKomorka.cs" />
+    <Compile Include="public Interfaces\Komorka\IKomorkaImienia.cs" />
+    <Compile Include="public Interfaces\Komorka\IKomorkaKwotyNaleznej.cs" />
+    <Compile Include="public Interfaces\Komorka\IKomorkaKwotyWejsciowej.cs" />
+    <Compile Include="public Interfaces\Komorka\IKomorkaWejsciowa.cs" />
+    <Compile Include="public Interfaces\Komorka\IKomorkaWejsciowaImienia.cs" />
+    <Compile Include="public Interfaces\Komorka\IKomorkaWyjsciowa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
