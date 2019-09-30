@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <ItemContainerTemplate x:Key="KomorkaWejsciowaImienia">
+    <DataTemplate x:Key="KomorkaWejsciowaImienia">
         <TextBlock Text="{Binding TekstKomorki}"/>
-    </ItemContainerTemplate>
+    </DataTemplate>
     
 </ResourceDictionary>
