@@ -3,7 +3,7 @@
     <ResourceDictionary.MergedDictionaries>
 
         <ResourceDictionary Source="SelektorSzablonuKomorki/SelektorSzablonuKomorki.xaml"/>
-        <ResourceDictionary Source="Widok.xaml"/>
+        <ResourceDictionary Source="SzablonPaneluTabeli.xaml"/>
 
     </ResourceDictionary.MergedDictionaries> 
 
