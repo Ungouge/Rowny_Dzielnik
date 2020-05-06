@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9C009FF-D4FA-4501-8749-9F2DC020DDFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dzielnik.Zasoby</RootNamespace>
+    <AssemblyName>Dzielnik.Zasoby</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug i testy|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug i testy\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Zasoby debug i testy|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Zasoby debug i testy\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Model %28debug i testy%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Model %28debug i testy%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeklaracjaPrzyjazniTestow.cs" />
+    <Compile Include="Fabryki\kryteriaWyboru\AbstrakcyjnaFabrykaKryteriumWyboruTabeliNaleznosciPienieznych.cs" />
+    <Compile Include="Fabryki\tabelaNaleznosci\FabrykaPolozeniaWTabeliNaleznosci.cs" />
+    <Compile Include="Fabryki\kryteriaWyboru\FabrykaKryteriumWyboruTabeliNaleznosciPienieznychNull.cs" />
+    <Compile Include="Fabryki\naleznosci\naleznoscPieniezne\AbstrakcyjnaFabrykaNaleznosciPienieznejDlaTabeliNaleznosci.cs" />
+    <Compile Include="Fabryki\naleznosci\naleznoscPieniezne\FabrykaNaleznoscpienieznaDiagonalna.cs" />
+    <Compile Include="Fabryki\naleznosci\naleznoscPieniezne\FabrykaNaleznoscPieniezna.cs" />
+    <Compile Include="Fabryki\osoby\osobaPieniezna\FabrykaOsobaPieniezna.cs" />
+    <Compile Include="Fabryki\tabelaNaleznosci\FabrykaTabelaNalezosciPienieznej.cs" />
+    <Compile Include="Fabryki\tabelaNaleznosci\FabrykaTabelaNalezosciPienieznejNull.cs" />
+    <Compile Include="Fabryki\tabliceOsob\tablicaOsobPieniezna\FabrykaTablicaOsobPienieznych.cs" />
+    <Compile Include="Fabryki\naleznosci\naleznoscPieniezne\FabrykaNaleznoscPienieznaZerowa.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumIlosciWymian\CzyPorownywaneKyrteriumLepsze.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumIlosciWymian\DodajPolozenieZmienionejNaleznosci.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumIlosciWymian\KryteriumIlosciWymian.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumSumyWymienionejNaleznosciPienieznej\CzyPorownywaneKyrteriumLepsze.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumSumyWymienionejNaleznosciPienieznej\DodajNaleznoscDoSumyWymienionejNaleznosci.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumSumyWymienionejNaleznosciPienieznej\KryteriumSumyWymienionejNaleznosciPienieznej.cs" />
+    <Compile Include="KryteriumWyboru\KryteriumWyboruTabeliNaleznosciPienieznych\KryteriumWyboruTabeliNaleznosciPienieznychNull.cs" />
+    <Compile Include="KryteriumWyboru\KryteriumWyboruTabeliNaleznosciPienieznejBaza.cs" />
+    <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPienieznaZerowa\CzyWieksze.cs" />
+    <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPienieznaZerowa\Odwrotnosc.cs" />
+    <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPienieznaZerowa\Roznica.cs" />
+    <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPienieznaZerowa\Suma.cs" />
+    <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPieniezna\CzyWieksze.cs" />
+    <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPieniezna\NaleznoscPieniezna.cs" />
+    <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPienieznaDiagonalna.cs" />
+    <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPienieznaZerowa\NaleznoscPienieznaZerowa.cs" />
+    <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPieniezna\Odwrotnosc.cs" />
+    <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPieniezna\Roznica.cs" />
+    <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPieniezna\Suma.cs" />
+    <Compile Include="Osoby\OsobaID.cs" />
+    <Compile Include="Osoby\OsobaPieniezna\OsobaPieniezna.cs" />
+    <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\CzyKoordynatyDiagonalne.cs" />
+    <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\CzyKoordynatyGorntrojkatne.cs" />
+    <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\polozenieDolntrojkatneWTabeliKomorek.cs" />
+    <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\polozenieGornotrojkatneWTabeliKomorek.cs" />
+    <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\polozenieGornotrojkatneWTabeliNaleznosci.cs" />
+    <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\PolozenieWTabeliNaleznosci.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\DeklaracjaPrzyjazniTestow.cs" />
+    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznejNull\TabelaNaleznosciPienieznejNull.cs" />
+    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\TabelaNaleznosciPienieznej.cs" />
+    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\tenIndekstatorPolozenia.cs" />
+    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\UstalWartoscWTabeliNaleznosci.cs" />
+    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\ZwrocLepszeKryterium.cs" />
+    <Compile Include="TablicaOsob\tablicaOsobPienieznych\GetEnumerator.cs" />
+    <Compile Include="TablicaOsob\tablicaOsobPienieznych\TablicaOsobPienieznych.cs" />
+    <Compile Include="TablicaOsob\tablicaOsobPienieznych\tenIndeksatorID.cs" />
+    <Compile Include="TablicaOsob\tablicaOsobPienieznych\WyrownajNaleznosciPomiedzyOsobami.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Dzielnik.Zasoby.Interfejsy\Dzielnik.Zasoby.Interfejsy.csproj">
+      <Project>{58def0cd-e430-47b5-8a60-6961a17d1541}</Project>
+      <Name>Dzielnik.Zasoby.Interfejsy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
