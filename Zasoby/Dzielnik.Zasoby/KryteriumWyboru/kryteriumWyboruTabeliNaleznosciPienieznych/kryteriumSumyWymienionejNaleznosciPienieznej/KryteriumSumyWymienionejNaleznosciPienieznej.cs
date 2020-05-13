@@ -6,13 +6,10 @@ namespace Dzielnik.Zasoby.KryteriumWyboru
     /// <summary>
     /// Kryterium wyboru tabel naleznosci najmniejszej sumy wymienionych naleznosci.
     /// </summary>
-    internal partial class KryteriumSumyWymienionejNaleznosciPienieznej : KryteriumWyboruTabeliNaleznosciPienieznychBaza, IKryteriumSumyWymienionejNaleznosciPienieznej
+    internal partial class KryteriumSumyWymienionejNaleznosciPienieznej : KryteriumWezWymienionejNaleznosciPienieznejBaza, IKryteriumSumyWymienionejNaleznosciPienieznej
     {
-        public INaleznoscPieniezna WezWymienionaNaleznosc { get; }
-
-        public KryteriumSumyWymienionejNaleznosciPienieznej(INaleznoscPieniezna wymienionaNaleznosc )
+        public KryteriumSumyWymienionejNaleznosciPienieznej(INaleznoscPieniezna wymienionaNaleznosc ) : base(wymienionaNaleznosc)
         {
-            WezWymienionaNaleznosc = wymienionaNaleznosc;
         }
     }
 }
