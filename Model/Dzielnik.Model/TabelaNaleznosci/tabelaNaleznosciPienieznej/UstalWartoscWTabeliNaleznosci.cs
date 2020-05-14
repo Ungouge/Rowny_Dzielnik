@@ -21,7 +21,7 @@ namespace Dzielnik.Model.TabelaNaleznosci
                     //i teoretycznie kryterium powinno usunac te polozenie. W drzewie binarmyn modelu znajdzie sie inne rozwiazanie bez
                     //niepotrzebnych wymian, wiec taka galaz predzej czy pozniej "przegra" z prostrzym rozwiazaniem,
                     //wiec dla zachowania prostoty kodu zostalo pominiete usuwanie polozen z kryterium.
-                    return kryteriumIlosciWymian.DodajPolozenieZmienionejNaleznosci(polozenieWTabeli);
+                    return kryteriumIlosciWymian.DodajPolozenieZmienionejNaleznosci(polozenieWTabeli, roznicaNaleznosci);
                 default:
                     throw new NotImplementedException("Nie zaimplementowano tego kryterium naleznosci pienieznej w TabelaNaleznosciPienieznej.UstalWartoscWTabeliNaleznosci");
             }

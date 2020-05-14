@@ -6,9 +6,9 @@ namespace Dzielnik.Zasoby.KryteriumWyboru
     {
         public override bool CzyPorownywaneKyrteriumLepsze(IKryteriumWyboruTabeliNaleznosciPienieznej porownywaneKryterium)
         {
-            if (porownywaneKryterium is IKryteriumIlosciWymian kryteriumWyboru)
-                if (this.WezIlosciWymian < kryteriumWyboru.WezIlosciWymian)
-                    return true;
+            if (porownywaneKryterium is IKryteriumIlosciWymian porownywaneKryteriumIlosciWymian)
+                if (this.WezIlosciWymian >= porownywaneKryteriumIlosciWymian.WezIlosciWymian)
+                    return base.CzyPorownywaneKyrteriumLepsze(porownywaneKryteriumIlosciWymian);
 
             return false;
         }
