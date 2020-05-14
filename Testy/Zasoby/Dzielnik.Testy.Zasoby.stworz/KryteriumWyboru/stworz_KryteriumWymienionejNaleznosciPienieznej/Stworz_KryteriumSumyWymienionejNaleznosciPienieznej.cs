@@ -4,7 +4,7 @@ using Dzielnik.Zasoby.Interfejsy.Naleznosci;
 
 namespace Dzielnik.Testy.Zasoby.KryteriumWyboru
 {
-    partial class Stworz_KryteriumWyboruTabeliNaleznosciPienieznych
+    partial class Stworz_KryteriumWymienionejNaleznosciPienieznej
     {
         public static IKryteriumSumyWymienionejNaleznosciPienieznej Stworz_KryteriumSumyWymienionejNaleznosci()
         {

@@ -1,7 +1,7 @@
 ﻿using Moq;
 
-using Dzielnik.Zasoby.Interfejsy.Naleznosci;
 using Dzielnik.Testy.Zasoby.Naleznosci;
+using Dzielnik.Zasoby.Interfejsy.Naleznosci;
 using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 
 namespace Dzielnik.Testy.Zasoby.KryteriumWyboru
@@ -15,10 +15,11 @@ namespace Dzielnik.Testy.Zasoby.KryteriumWyboru
 
             INaleznoscPieniezna naleznoscKryterium_Mock = Stworz_NaleznoscPieniezna_Mock.Stworz_Naleznosc_Swiadczenie_Mock(naleznoscKryteriumWPolgroszach);
 
-            kryteriumSumyWymienionejNaleznosci_Mock.SetupGet(tabela => tabela.WezWymienionaNaleznosc).Returns(naleznoscKryterium_Mock);
+            kryteriumSumyWymienionejNaleznosci_Mock.
+                SetupGet(tabela => tabela.WezWymienionaNaleznosc).
+                Returns(naleznoscKryterium_Mock);
             
             return kryteriumSumyWymienionejNaleznosci_Mock.Object;
         }
     }
 }
-

@@ -1,6 +1,8 @@
 ﻿using Xunit;
 
+using Dzielnik.Testy.Zasoby.Naleznosci;
 using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
+using Dzielnik.Zasoby.Interfejsy.Naleznosci;
 
 namespace Dzielnik.Testy.Zasoby.KryteriumWyboru.KryteriumIlosciWymian
 {
@@ -14,8 +16,12 @@ namespace Dzielnik.Testy.Zasoby.KryteriumWyboru.KryteriumIlosciWymian
         [InlineData(357)]
         public void Czy_Zwaraca_PrawidlowaWartosc(ushort iloscWymian)
         {
-            //Ustal i Dzialaj
-            IKryteriumIlosciWymian kryteriumIlosciWymian = Stworz_KryteriumWyboruTabeliNaleznosciPienieznych.Stworz_KryteriumIlosciWymian(iloscWymian);
+            //Ustal
+            INaleznoscPieniezna naleznoscPieniezna = Stworz_NaleznoscPieniezna_Mock.Stworz_Naleznosc_Mock();
+
+            //Dzialaj
+            IKryteriumIlosciWymian kryteriumIlosciWymian =
+                Stworz_KryteriumWymienionejNaleznosciPienieznej.Stworz_KryteriumIlosciWymian(iloscWymian, naleznoscPieniezna);
 
             //Asercja
             Assert.Equal(iloscWymian, kryteriumIlosciWymian.WezIlosciWymian);

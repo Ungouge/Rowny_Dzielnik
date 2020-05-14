@@ -21,7 +21,7 @@ namespace Dzielnik.Testy.Zasoby.KryteriumWyboru.KryteriumSumyWymienionejNaleznos
             INaleznoscPieniezna naleznoscPieniezna = Stworz_NaleznoscPieniezna.Stworz(wpalata);
 
             IKryteriumSumyWymienionejNaleznosciPienieznej kryteriumSumyWymienionejNaleznosci_Sprawdzana =
-                Stworz_KryteriumWyboruTabeliNaleznosciPienieznych.Stworz_KryteriumSumyWymienionejNaleznosci(naleznoscPieniezna);
+                Stworz_KryteriumWymienionejNaleznosciPienieznej.Stworz_KryteriumSumyWymienionejNaleznosci(naleznoscPieniezna);
 
             //Asercja
             Assert.Equal(wpalata, kryteriumSumyWymienionejNaleznosci_Sprawdzana.WezWymienionaNaleznosc.Swiadczenie);

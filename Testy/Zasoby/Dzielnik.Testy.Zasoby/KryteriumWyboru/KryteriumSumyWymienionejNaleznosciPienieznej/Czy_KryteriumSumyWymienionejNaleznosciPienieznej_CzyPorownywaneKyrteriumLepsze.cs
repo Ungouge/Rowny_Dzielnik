@@ -20,7 +20,7 @@ namespace Dzielnik.Testy.Zasoby.KryteriumWyboru.KryteriumSumyWymienionejNaleznos
             ( int NaleznoscWPolgroszach_Kryterium_Porownywana)
         {
             //Ustal
-            IKryteriumSumyWymienionejNaleznosciPienieznej kryteriumSumyWymienionejNaleznosci_Sprawdzana = Stworz_KryteriumWyboruTabeliNaleznosciPienieznych.Stworz_KryteriumSumyWymienionejNaleznosci();
+            IKryteriumSumyWymienionejNaleznosciPienieznej kryteriumSumyWymienionejNaleznosci_Sprawdzana = Stworz_KryteriumWymienionejNaleznosciPienieznej.Stworz_KryteriumSumyWymienionejNaleznosci();
 
             IKryteriumSumyWymienionejNaleznosciPienieznej kryteriumSumyWymienionejNaleznosci_Porownywana =
                 Stworz_KryteriumSumyWymienionejNaleznosciPienieznej_Mock.Stworz_Kryterium_Naleznosc_Polgrsze_Mock(NaleznoscWPolgroszach_Kryterium_Porownywana);
@@ -45,7 +45,7 @@ namespace Dzielnik.Testy.Zasoby.KryteriumWyboru.KryteriumSumyWymienionejNaleznos
             INaleznoscPieniezna naleznosc_Sprawdzana = Stworz_NaleznoscPieniezna.Stworz(NaleznoscWPolgroszach_Kryterium_Sprawdzane);
 
             IKryteriumSumyWymienionejNaleznosciPienieznej kryteriumSumyWymienionejNaleznosci_Sprawdzana =
-                Stworz_KryteriumWyboruTabeliNaleznosciPienieznych.Stworz_KryteriumSumyWymienionejNaleznosci(naleznosc_Sprawdzana);
+                Stworz_KryteriumWymienionejNaleznosciPienieznej.Stworz_KryteriumSumyWymienionejNaleznosci(naleznosc_Sprawdzana);
 
             IKryteriumSumyWymienionejNaleznosciPienieznej kryteriumSumyWymienionejNaleznosci_Porownywana =
                 Stworz_KryteriumSumyWymienionejNaleznosciPienieznej_Mock.Stworz_Kryterium_Naleznosc_Polgrsze_Mock(NaleznoscWPolgroszach_Kryterium_Porownywana);
@@ -74,7 +74,7 @@ namespace Dzielnik.Testy.Zasoby.KryteriumWyboru.KryteriumSumyWymienionejNaleznos
             INaleznoscPieniezna naleznosc_Sprawdzana = Stworz_NaleznoscPieniezna.Stworz(NaleznoscWPolgroszach_Kryterium_Sprawdzane);
 
             IKryteriumSumyWymienionejNaleznosciPienieznej kryteriumSumyWymienionejNaleznosci_Sprawdzana =
-                Stworz_KryteriumWyboruTabeliNaleznosciPienieznych.Stworz_KryteriumSumyWymienionejNaleznosci(naleznosc_Sprawdzana);
+                Stworz_KryteriumWymienionejNaleznosciPienieznej.Stworz_KryteriumSumyWymienionejNaleznosci(naleznosc_Sprawdzana);
 
             IKryteriumSumyWymienionejNaleznosciPienieznej kryteriumSumyWymienionejNaleznosci_Porownywana =
                 Stworz_KryteriumSumyWymienionejNaleznosciPienieznej_Mock.Stworz_Kryterium_Naleznosc_Polgrsze_Mock(NaleznoscWPolgroszach_Kryterium_Porownywana);
@@ -92,9 +92,9 @@ namespace Dzielnik.Testy.Zasoby.KryteriumWyboru.KryteriumSumyWymienionejNaleznos
         {
             //Ustal
             IKryteriumSumyWymienionejNaleznosciPienieznej kryteriumSumyWymienionejNaleznosci_Sprawdzana =
-                Stworz_KryteriumWyboruTabeliNaleznosciPienieznych.Stworz_KryteriumSumyWymienionejNaleznosci();
+                Stworz_KryteriumWymienionejNaleznosciPienieznej.Stworz_KryteriumSumyWymienionejNaleznosci();
 
-            IKryteriumIlosciWymian kryteriumIlosciWymian = Stworz_KryteriumIlosciWymian_Mock.Stworz_KryteriumIlosciWymian_WezIlosciWymian_Mock(ushort.MaxValue);
+            IKryteriumIlosciWymian kryteriumIlosciWymian = Stworz_KryteriumIlosciWymian_Mock.Stworz_KryteriumIlosciWymian_WezIlosciWymian_WezWymienionaNaleznosc_Mock(UInt16.MaxValue, Int32.MaxValue);
 
             //Dzialaj
             bool Czy_KryteriumWieksze =

@@ -24,7 +24,7 @@ namespace Dzielnik.Testy.Zasoby.KryteriumWyboru.KryteriumSumyWymienionejNaleznos
             INaleznoscPieniezna naleznoscPieniezna = Stworz_NaleznoscPieniezna.Stworz(wplata);
 
             IKryteriumSumyWymienionejNaleznosciPienieznej kryteriumSumyWymienionejNaleznosci_Sprawdzana =
-                Stworz_KryteriumWyboruTabeliNaleznosciPienieznych.Stworz_KryteriumSumyWymienionejNaleznosci(naleznoscPieniezna);
+                Stworz_KryteriumWymienionejNaleznosciPienieznej.Stworz_KryteriumSumyWymienionejNaleznosci(naleznoscPieniezna);
 
             INaleznoscPieniezna naleznoscPieniezna_DoDodania = Stworz_NaleznoscPieniezna_Mock.Stworz_Naleznosc_Swiadczenie_Mock( Naleznosc_DoDodania);
 
