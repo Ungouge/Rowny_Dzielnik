@@ -23,7 +23,7 @@ namespace Dzielnik.Zasoby.Fabryki
                 case KryteriumWyboruTabeliNaleznosciWylicznik.KryteriumSumyWymienionejNaleznosci:
                     goto default;
                 case KryteriumWyboruTabeliNaleznosciWylicznik.IlosciWymian:
-                    return new KryteriumIlosciWymian();
+                    return new KryteriumIlosciWymian(fabrykaNaleznoscPieniezna.StworzNaleznoscZerowa());
                 default:
                     return new KryteriumSumyWymienionejNaleznosciPienieznej(fabrykaNaleznoscPieniezna.StworzNaleznoscZerowa());
             }
