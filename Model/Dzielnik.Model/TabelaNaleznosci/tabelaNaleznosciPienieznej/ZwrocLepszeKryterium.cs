@@ -6,9 +6,11 @@ namespace Dzielnik.Model.TabelaNaleznosci
     {
         public ITabelaNaleznosciPienieznej ZwrocLepszeKryterium(ITabelaNaleznosciPienieznej porownywanaTabela)
         {
-            if ( false == porownywanaTabela is ITabelaNaleznosciPienieznejNull)
-                if (this.KryteriumWyboruTabeliNaleznosci.CzyPorownywaneKyrteriumLepsze(porownywanaTabela.KryteriumWyboruTabeliNaleznosci))
-                    return porownywanaTabela;
+            if ( porownywanaTabela is ITabelaNaleznosciPienieznejNull)
+                return this;
+
+            if (this.KryteriumWyboruTabeliNaleznosci.CzyPorownywaneKyrteriumLepsze(porownywanaTabela.KryteriumWyboruTabeliNaleznosci))
+                return porownywanaTabela;
 
             return this;
         }
