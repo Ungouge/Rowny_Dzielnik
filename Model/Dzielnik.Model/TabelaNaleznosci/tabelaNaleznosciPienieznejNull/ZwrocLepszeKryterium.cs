@@ -2,7 +2,7 @@
 
 namespace Dzielnik.Model.TabelaNaleznosci
 {
-    partial class TabelaNaleznosciPienieznejNull : TabelaNaleznosciPienieznejBaza, ITabelaNaleznosciPienieznejNull
+    partial class TabelaNaleznosciPienieznejNull
     {
         public ITabelaNaleznosciPienieznej ZwrocLepszeKryterium(ITabelaNaleznosciPienieznej porownywanaTabela)
         {

@@ -4,7 +4,7 @@ using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
 
 namespace Dzielnik.Model.TabelaNaleznosci
 {
-    partial class TabelaNaleznosciPienieznejNull : TabelaNaleznosciPienieznejBaza, ITabelaNaleznosciPienieznejNull
+    partial class TabelaNaleznosciPienieznejNull
     {
         public void DodajWymianeNalzenosciUaktualniajacKryterium(INaleznoscPieniezna naleznosc, IPolozenieGornotrojkatneWTabeliNaleznosci polozenieWTabeli)
         {
