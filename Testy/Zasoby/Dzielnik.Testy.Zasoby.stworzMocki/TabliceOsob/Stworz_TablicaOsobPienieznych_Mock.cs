@@ -12,6 +12,13 @@ namespace Dzielnik.Testy.Zasoby.TabliceOsob
 {
     public static class Stworz_TablicaOsobPienieznych_Mock
     {
+        public static ITablicaOsobPienieznych Stworz_Mock()
+        {
+            Mock<ITablicaOsobPienieznych> tablicaOsobOczekiwane = new Mock<ITablicaOsobPienieznych>();
+
+            return tablicaOsobOczekiwane.Object;
+        }
+
         public static ITablicaOsobPienieznychIterowalna Stworz_GetEnumerator_Mock_Swiadczenie_Mock(int[] swiadczeniaPieniezne)
         {
             Mock<ITablicaOsobPienieznychIterowalna> tablicaOsobOczekiwane = new Mock<ITablicaOsobPienieznychIterowalna>();
