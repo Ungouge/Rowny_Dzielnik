@@ -12,7 +12,7 @@ namespace Dzielnik.Testy.Model.ObliczaczTabeliNaleznosci
         internal static IFabrykaDlaTabelaNaleznosciPienieznychObliczacz Stworz_Weryfikator_Mock(Mock<INajlepszaWymianaNalezosciPienieznejZnajdywacz> Znajdywacz_Mock,
             Mock<ITablicaOsobPienieznaKoncowaPrefabrykator> prefabrykator_Mock)
         {
-            Mock<IFabrykaDlaTabelaNaleznosciPienieznychObliczacz> fabryka_Mock = new Mock<IFabrykaDlaTabelaNaleznosciPienieznychObliczacz>()
+            Mock<IFabrykaDlaTabelaNaleznosciPienieznychObliczacz> fabryka_Mock = new Mock<IFabrykaDlaTabelaNaleznosciPienieznychObliczacz>();
 
             fabryka_Mock.
                 Setup(fabryka => fabryka.StworzNajlepszaWymianaNalezosciPienieznejZnajdywacz(It.IsAny<ITablicaOsobPienieznych>())).
