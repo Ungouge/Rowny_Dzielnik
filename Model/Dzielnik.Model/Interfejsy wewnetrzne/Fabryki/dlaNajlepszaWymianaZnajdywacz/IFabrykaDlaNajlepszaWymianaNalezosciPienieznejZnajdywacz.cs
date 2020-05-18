@@ -11,10 +11,6 @@ namespace Dzielnik.Model.Interfejsy.Fabryki
     /// </summary>
     internal interface IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz
     {
-        IRozniceDoStanuKwitaNaleznosciPienieznychSumator StworzRozniceDoStanuKwitaNaleznosciPienieznychSumator(ITablicaOsobPienieznychIterowalna tablicaOsobPoczatkowa);
-
-        INajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz StworzNajwiekszaMozliwaNaleznoscDoWymianyUstalacz(ITablicaOsobPienieznychZwrotna poczatkowaTablicaOsob);
-
         ITabelaNaleznosciPienieznej StworzStartowaTabelaNaleznosciPienieznej();
 
         ITabelaNaleznosciPienieznej StworzTabelaNaleznosciPienieznejNull();

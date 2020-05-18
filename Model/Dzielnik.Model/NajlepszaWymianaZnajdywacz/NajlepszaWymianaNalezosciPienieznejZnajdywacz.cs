@@ -18,13 +18,14 @@ namespace Dzielnik.Model.NajlepszaWymianaZnajdywacz
         private readonly IRozniceDoStanuKwitaNaleznosciPienieznychSumator rozniceDoStanuKwitaSumator;
 
         internal NajlepszaWymianaNalezosciPienieznejZnajdywacz(IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz fabryka,
-            ITablicaOsobPienieznych tablicaOsobKoncowa)
+            INajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz najwiekszaMozliwaNaleznoscDoWymianyUstalacz,
+            IRozniceDoStanuKwitaNaleznosciPienieznychSumator rozniceDoStanuKwitaSumator)
         {
             this.fabryka = fabryka;
 
-            najwiekszaMozliwaNaleznoscDoWymianyUstalacz = this.fabryka.StworzNajwiekszaMozliwaNaleznoscDoWymianyUstalacz(tablicaOsobKoncowa);
+            this.najwiekszaMozliwaNaleznoscDoWymianyUstalacz = najwiekszaMozliwaNaleznoscDoWymianyUstalacz;
 
-            rozniceDoStanuKwitaSumator = this.fabryka.StworzRozniceDoStanuKwitaNaleznosciPienieznychSumator(tablicaOsobKoncowa);
+            this.rozniceDoStanuKwitaSumator = rozniceDoStanuKwitaSumator;
         }
     }
 }
