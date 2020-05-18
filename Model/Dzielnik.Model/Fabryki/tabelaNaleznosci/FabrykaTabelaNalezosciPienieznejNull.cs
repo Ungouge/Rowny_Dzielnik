@@ -28,7 +28,7 @@ namespace Dzielnik.Model.Fabryki
             IKryteriumWyboruTabeliNaleznosciPienieznej kryterium =
                 fabrykaKryteriumWyboruTabeliNaleznosciNull.StworzKryteriumWyboruTabeliNaleznosciPienieznychNull();
 
-            return new TabelaNaleznosciPienieznejNull(iloscOsob, abstrakcyjnaFabrykaNaleznosciDlaTabeliNaleznosci, fabrykaKryteriumWyboruTabeliNaleznosciNull.StworzKryteriumWyboruTabeliNaleznosciPienieznychNull());
+            return new TabelaNaleznosciPienieznejNull(iloscOsob, abstrakcyjnaFabrykaNaleznosciDlaTabeliNaleznosci, kryterium);
         }
     }
 }
