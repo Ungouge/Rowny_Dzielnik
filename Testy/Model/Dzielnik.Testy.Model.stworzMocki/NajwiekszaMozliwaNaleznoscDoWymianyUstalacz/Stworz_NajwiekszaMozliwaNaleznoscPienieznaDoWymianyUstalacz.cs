@@ -9,9 +9,9 @@ namespace Dzielnik.Testy.Model.NajwiekszaMozliwaNaleznoscDoWymianyUstalacz
     {
         private static readonly IFabrykaNaleznoscPienieznaZerowa fabryka = Stworz_FabrykaNaleznoscPienieznaZerowa_Mock.Stworz();
 
-        public static INajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz Stworz(ITablicaOsobPienieznychZwrotna tablicaOsobPoczatkowa)
+        public static INajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz Stworz(ITablicaOsobPienieznychZwrotna koncowaTablicaOsob)
         {
-            return new NajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz(fabryka, tablicaOsobPoczatkowa);
+            return new NajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz(fabryka, koncowaTablicaOsob);
         }
     }
 }

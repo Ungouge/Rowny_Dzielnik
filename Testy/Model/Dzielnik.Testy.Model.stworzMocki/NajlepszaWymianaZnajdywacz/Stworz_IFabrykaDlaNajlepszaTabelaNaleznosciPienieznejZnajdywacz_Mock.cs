@@ -23,24 +23,6 @@ namespace Dzielnik.Testy.Model.NajlepszaWymianaZnajdywacz
 
             fabryka_Mock.Setup
             (
-                fabryka => fabryka.StworzRozniceDoStanuKwitaNaleznosciPienieznychSumator(It.IsAny<ITablicaOsobPienieznychIterowalna>())
-            ).Returns
-            (
-                (ITablicaOsobPienieznychIterowalna tablicaOsobPoczatkowa) =>
-                Stworz_RozniceDoStanuKwitaNaleznosciPienieznychSumator.Stworz(tablicaOsobPoczatkowa)
-            );
-
-            fabryka_Mock.Setup
-            (
-                fabryka => fabryka.StworzNajwiekszaMozliwaNaleznoscDoWymianyUstalacz(It.IsAny<ITablicaOsobPienieznych>())
-            ).Returns
-            (
-                (ITablicaOsobPienieznychZwrotna tablicaOsobPoczatkowa) =>
-                Stworz_NajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz.Stworz(tablicaOsobPoczatkowa)
-            );
-
-            fabryka_Mock.Setup
-            (
                 fabryka => fabryka.StworzStartowaTabelaNaleznosciPienieznej()
             ).Returns
             (

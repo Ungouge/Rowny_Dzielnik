@@ -6,9 +6,9 @@ namespace Dzielnik.Testy.Model.DoStanuKwitaSumator
 {
     public static class Stworz_RozniceDoStanuKwitaNaleznosciPienieznychSumator
     {
-        internal static IRozniceDoStanuKwitaNaleznosciPienieznychSumator Stworz(ITablicaOsobPienieznychIterowalna tablicaOsobPoczatkowa)
+        internal static IRozniceDoStanuKwitaNaleznosciPienieznychSumator Stworz(ITablicaOsobPienieznychIterowalna koncowaTablicaOsob)
         {
-            return new RozniceDoStanuKwitaNaleznosciPienieznychSumator(tablicaOsobPoczatkowa);
+            return new RozniceDoStanuKwitaNaleznosciPienieznychSumator(koncowaTablicaOsob);
         }
     }
 }

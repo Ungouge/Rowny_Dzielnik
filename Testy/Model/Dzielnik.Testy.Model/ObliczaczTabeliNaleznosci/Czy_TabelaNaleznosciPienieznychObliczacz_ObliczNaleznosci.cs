@@ -21,12 +21,12 @@ namespace Dzielnik.Testy.Model.ObliczaczTabeliNaleznosci
             Mock<INajlepszaWymianaNalezosciPienieznejZnajdywacz> znajdywacz_Mock =
                 Stworz_NajlepszaWymianaNalezosciPienieznejZnajdywacz_Mock.Stworz_Weryfikator_Mock();
 
+            IFabrykaDlaTabelaNaleznosciPienieznychObliczacz fabryka =
+                Stworz_FabrykaDlaTabelaNaleznosciObliczaczPienieznych_Mock.Stworz_Weryfikator_Mock(znajdywacz_Mock);
+
             Mock<ITablicaOsobPienieznaKoncowaPrefabrykator> prefabrykator_Mock = Stworz_TablicaOsobKoncowaPrefabrykator_Mock.Stworz_Weryfikator_Mock();
 
-            IFabrykaDlaTabelaNaleznosciPienieznychObliczacz fabryka =
-                Stworz_FabrykaDlaTabelaNaleznosciObliczaczPienieznych_Mock.Stworz_Weryfikator_Mock(znajdywacz_Mock, prefabrykator_Mock);
-
-            ITabelaNaleznosciPienieznychObliczacz Obliczacz = Stworz_TabelaNaleznosciPienieznychObliczacz.Stworz(fabryka);
+            ITabelaNaleznosciPienieznychObliczacz Obliczacz = Stworz_TabelaNaleznosciPienieznychObliczacz.Stworz(fabryka, prefabrykator_Mock.Object);
 
             ITablicaOsobPienieznych tablicaOsob = Stworz_TablicaOsobPienieznych_Mock.Stworz_Mock();
 

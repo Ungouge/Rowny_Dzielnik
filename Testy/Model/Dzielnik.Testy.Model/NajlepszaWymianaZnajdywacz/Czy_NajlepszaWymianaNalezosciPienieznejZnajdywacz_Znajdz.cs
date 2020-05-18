@@ -29,10 +29,9 @@ namespace Dzielnik.Testy.Model.NajlepszaWymianaZnajdywacz
         {
             //Ustal
             ITablicaOsobPienieznych tablicaOsob = Stworz_TablicaOsobPienieznych.Stworz(naleznosciDoTablicyOsob);
-
+            
             INajlepszaWymianaNalezosciPienieznejZnajdywacz znajdywacz =
-                Stworz_NajlepszaWymianaNalezosciPienieznejZnajdywacz.Stworz(
-                    Stworz_TablicaOsobPienieznaKoncowaPrefabrykator.Stworz().StworzTablicaKoncowa(tablicaOsob),
+                Stworz_NajlepszaWymianaNalezosciPienieznejZnajdywacz.Stworz(tablicaOsob,
                     KryteriumWyboruTabeliNaleznosciWylicznik.IlosciWymian);
 
             //Dzialaj
@@ -68,8 +67,7 @@ namespace Dzielnik.Testy.Model.NajlepszaWymianaZnajdywacz
             ITablicaOsobPienieznych tablicaOsob = Stworz_TablicaOsobPienieznych.Stworz(naleznosciDoTablicyOsob);
 
             INajlepszaWymianaNalezosciPienieznejZnajdywacz znajdywacz =
-                Stworz_NajlepszaWymianaNalezosciPienieznejZnajdywacz.Stworz(
-                    Stworz_TablicaOsobPienieznaKoncowaPrefabrykator.Stworz().StworzTablicaKoncowa(tablicaOsob),
+                Stworz_NajlepszaWymianaNalezosciPienieznejZnajdywacz.Stworz(tablicaOsob,
                     KryteriumWyboruTabeliNaleznosciWylicznik.KryteriumSumyWymienionejNaleznosci);
 
             //Dzialaj
