@@ -16,17 +16,19 @@ namespace Dzielnik.Model.ObliczaczTabeliNaleznosci
 
         private readonly ITablicaOsobPienieznaKoncowaPrefabrykator tablicaOsobKoncowaPrefabrykator;
 
-        public TabelaNaleznosciPienieznychObliczacz(IFabrykaDlaTabelaNaleznosciPienieznychObliczacz fabryka)
+        public TabelaNaleznosciPienieznychObliczacz(IFabrykaDlaTabelaNaleznosciPienieznychObliczacz fabryka, ITablicaOsobPienieznaKoncowaPrefabrykator tablicaOsobKoncowaPrefabrykator)
         {
             this.fabryka = fabryka;
 
-            tablicaOsobKoncowaPrefabrykator = fabryka.StworzTablicaOsobPienieznaKoncowaPrefabrykator();
+            this.tablicaOsobKoncowaPrefabrykator = tablicaOsobKoncowaPrefabrykator;
         }
 
         public ITabelaNaleznosciPienieznejZwrotna ObliczNaleznosci(ITablicaOsobPienieznych tablicaOsob)
         {
+            ITablicaOsobPienieznych koncowaTablicaOsob = tablicaOsobKoncowaPrefabrykator.StworzTablicaKoncowa(tablicaOsob);
+
             INajlepszaWymianaNalezosciPienieznejZnajdywacz znajdywacz =
-                fabryka.StworzNajlepszaWymianaNalezosciPienieznejZnajdywacz(tablicaOsobKoncowaPrefabrykator.StworzTablicaKoncowa(tablicaOsob));
+                fabryka.StworzNajlepszaWymianaNalezosciPienieznejZnajdywacz(koncowaTablicaOsob);
 
             return znajdywacz.Znajdz(tablicaOsob);
         }

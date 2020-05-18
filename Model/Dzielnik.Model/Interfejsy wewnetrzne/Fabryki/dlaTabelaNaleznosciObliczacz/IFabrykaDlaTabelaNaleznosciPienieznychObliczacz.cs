@@ -13,10 +13,5 @@ namespace Dzielnik.Model.Interfejsy.Fabryki
         /// Tworzy instancje znajdywacza najlepszej wymiany naleznosci pienieznej.
         /// </summary>
         INajlepszaWymianaNalezosciPienieznejZnajdywacz StworzNajlepszaWymianaNalezosciPienieznejZnajdywacz(ITablicaOsobPienieznych tablicaOsobKoncowa);
-
-        /// <summary>
-        /// Tworzy instancje prefabrykatora tablic osob pienieznych.
-        /// </summary>
-        ITablicaOsobPienieznaKoncowaPrefabrykator StworzTablicaOsobPienieznaKoncowaPrefabrykator();
     }
 }
