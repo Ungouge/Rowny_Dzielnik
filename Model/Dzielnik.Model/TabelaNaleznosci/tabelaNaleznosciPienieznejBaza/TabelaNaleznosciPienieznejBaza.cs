@@ -1,4 +1,5 @@
 ﻿using Dzielnik.Zasoby.Interfejsy.Fabryki;
+using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 
 namespace Dzielnik.Model.TabelaNaleznosci
 {
@@ -7,10 +8,10 @@ namespace Dzielnik.Model.TabelaNaleznosci
     /// </summary>
     internal abstract partial class TabelaNaleznosciPienieznejBaza
     {
-        public byte Rozmiar { get; }
-
         protected readonly IAbstrakcyjnaFabrykaNaleznosciPienieznaDlaTabeliNaleznosci abstrakcyjnaFabrykaNaleznosciDlaTabeliNaleznosci;
-
+        
+        public byte Rozmiar { get; }
+        
         protected TabelaNaleznosciPienieznejBaza(byte iloscOsob, 
             IAbstrakcyjnaFabrykaNaleznosciPienieznaDlaTabeliNaleznosci abstrakcyjnaFabrykaNaleznosciDlaTabeliNaleznosci)
         {

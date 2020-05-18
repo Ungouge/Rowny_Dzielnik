@@ -6,7 +6,7 @@ using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
 
 namespace Dzielnik.Model.TabelaNaleznosci
 {
-    partial class TabelaNaleznosciPienieznej : TabelaNaleznosciPienieznejBaza, ITabelaNaleznosciPienieznej
+    partial class TabelaNaleznosciPienieznej
     {
         public override INaleznoscPienieznaSwiadczenie this[IPolozenieWTabeliNaleznosci polozenieWTabeli]
         {
