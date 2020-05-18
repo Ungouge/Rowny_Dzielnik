@@ -16,7 +16,6 @@ namespace Dzielnik.Model.ObliczaczTabeliNaleznosci
                 default:
                     throw new ZlyTypNaleznosciWyjatek(this, RodzajNaleznosci);
             }
-
         }
 
         private RodzajNaleznosciWylicznik RodzajNaleznosci
