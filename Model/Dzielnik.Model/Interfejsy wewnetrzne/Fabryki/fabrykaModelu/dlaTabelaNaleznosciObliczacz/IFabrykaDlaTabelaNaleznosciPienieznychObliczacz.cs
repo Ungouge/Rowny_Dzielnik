@@ -1,5 +1,5 @@
 ﻿using Dzielnik.Model.Interfejsy.NajlepszaWymianaZnajdywacz;
-using Dzielnik.Model.Interfejsy.TablicaOsobKoncowaPrefabrykator;
+using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
 namespace Dzielnik.Model.Interfejsy.Fabryki
@@ -12,6 +12,7 @@ namespace Dzielnik.Model.Interfejsy.Fabryki
         /// <summary>
         /// Tworzy instancje znajdywacza najlepszej wymiany naleznosci pienieznej.
         /// </summary>
-        INajlepszaWymianaNalezosciPienieznejZnajdywacz StworzNajlepszaWymianaNalezosciPienieznejZnajdywacz(ITablicaOsobPienieznych tablicaOsobKoncowa);
+        INajlepszaWymianaNalezosciPienieznejZnajdywacz StworzNajlepszaWymianaNalezosciPienieznejZnajdywacz(ITablicaOsobPienieznych tablicaOsobKoncowa,
+            KryteriumWyboruTabeliNaleznosciWylicznik kryteriumWyboruTabeliNaleznosci);
     }
 }

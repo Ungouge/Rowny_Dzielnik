@@ -1,6 +1,7 @@
 ﻿using Dzielnik.Model.Interfejsy.DoStanuKwitaSumator;
 using Dzielnik.Model.Interfejsy.NajwiekszaMozliwaNaleznoscDoWymianyUstalacz;
 using Dzielnik.Model.Interfejsy.TabeleNaleznosci;
+using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
@@ -11,9 +12,9 @@ namespace Dzielnik.Model.Interfejsy.Fabryki
     /// </summary>
     internal interface IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz
     {
-        ITabelaNaleznosciPienieznej StworzStartowaTabelaNaleznosciPienieznej();
+        ITabelaNaleznosciPienieznej StworzStartowaTabelaNaleznosciPienieznej(byte iloscOsob, KryteriumWyboruTabeliNaleznosciWylicznik kryteriumWyboruTabeliNaleznosci);
 
-        ITabelaNaleznosciPienieznej StworzTabelaNaleznosciPienieznejNull();
+        ITabelaNaleznosciPienieznej StworzTabelaNaleznosciPienieznejNull(byte iloscOsob);
 
         IPolozenieWTabeliNaleznosci StworzPolozenieWTabeliNaleznosci(byte index_X, byte index_Y);
     }
