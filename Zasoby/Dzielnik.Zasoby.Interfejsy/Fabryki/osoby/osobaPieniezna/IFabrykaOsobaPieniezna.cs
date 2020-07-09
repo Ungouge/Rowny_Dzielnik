@@ -11,6 +11,6 @@ namespace Dzielnik.Zasoby.Interfejsy.Fabryki
         /// <summary>
         /// Stworz nowa instancje osoby pienieznej.
         /// </summary>
-        IOsobaPienieznaWymienna StworzOsoba(byte iD, INaleznoscPieniezna naleznosc);
+        IOsobaPieniezna StworzOsoba(byte iD, INaleznoscPieniezna naleznosc);
     }
 }

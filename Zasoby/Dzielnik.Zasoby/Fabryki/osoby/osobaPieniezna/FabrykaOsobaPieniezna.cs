@@ -10,7 +10,7 @@ namespace Dzielnik.Zasoby.Fabryki
     /// </summary>
     public class FabrykaOsobaPieniezna : IFabrykaOsobaPieniezna
     {
-        public IOsobaPienieznaWymienna StworzOsoba(byte iD, INaleznoscPieniezna naleznosc)
+        public IOsobaPieniezna StworzOsoba(byte iD, INaleznoscPieniezna naleznosc)
         {
             return new OsobaPieniezna(iD, naleznosc);
         }
