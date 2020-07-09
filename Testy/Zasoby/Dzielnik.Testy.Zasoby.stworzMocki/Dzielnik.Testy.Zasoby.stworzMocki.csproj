@@ -39,6 +39,15 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'modelWidoku %28testy i debug%29|AnyCPU'">
+    <OutputPath>bin\modelWidoku %28testy i debug%29\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Castle.Core.4.4.0\lib\net45\Castle.Core.dll</HintPath>
@@ -70,7 +79,7 @@
     <Compile Include="Osoby\osobaID\Stworz_OsobaID_Moq.cs" />
     <Compile Include="Osoby\OsobaPieniezna\Stworz_OsobaPieniezna_Mock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TabeleNaleznosci\Stworz_TabelaNaleznosciPienieznej_Mock.cs" />
+    <Compile Include="TabelaNaleznosci\Stworz_PolozenieWTabeliNaleznosci_Mock.cs" />
     <Compile Include="TabliceOsob\Stworz_TablicaOsobPienieznych_Mock.cs" />
   </ItemGroup>
   <ItemGroup>

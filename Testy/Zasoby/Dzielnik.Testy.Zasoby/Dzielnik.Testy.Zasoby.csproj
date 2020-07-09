@@ -44,6 +44,16 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'modelWidoku %28testy i debug%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\modelWidoku %28testy i debug%29\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -70,6 +80,7 @@
     <Compile Include="KryteriumWyboru\KryteriumIlosciWymian\Czy_KryteriumIlosciWymian_CzyPorownywaneKyrteriumLepsze.cs" />
     <Compile Include="KryteriumWyboru\KryteriumIlosciWymian\Czy_KryteriumIlosciWymian_DodajPolozenieZmienionejNaleznosci.cs" />
     <Compile Include="KryteriumWyboru\KryteriumIlosciWymian\Czy_KryteriumIlosciWymian_WezIloscWymian.cs" />
+    <Compile Include="KryteriumWyboru\KryteriumIlosciWymian\Czy_KryteriumIlosciWymian_WezWymienionaNaleznosc.cs" />
     <Compile Include="KryteriumWyboru\KryteriumSumyWymienionejNaleznosciPienieznej\Czy_KryteriumSumyWymienionejNaleznosciPienieznej_CzyPorownywaneKyrteriumLepsze.cs" />
     <Compile Include="KryteriumWyboru\KryteriumSumyWymienionejNaleznosciPienieznej\Czy_KryteriumSumyWymienionejNaleznosciPienieznej_DodajNaleznoscDoSumyWymienionejNaleznosci.cs" />
     <Compile Include="KryteriumWyboru\KryteriumSumyWymienionejNaleznosciPienieznej\Czy_KryteriumSumyWymienionejNaleznosciPienieznej_WezWymienionaNaleznosc.cs" />
@@ -91,13 +102,10 @@
     <Compile Include="Naleznosci\naleznosciPieniezne\NaleznoscPieniezna\Czy_NaleznoscPieniezna_Swiadczenie.cs" />
     <Compile Include="Osoby\OsobaID\Czy_OsobaID_CzyToTaSamaOsoba_Baza.cs" />
     <Compile Include="Osoby\OsobaPieniezna\Czy_OsobaPieniezna_CzyToTaSamaOsoba.cs" />
-    <Compile Include="Osoby\OsobaPieniezna\Czy_OsobaPieniezna_DodajNaleznoscOsobie.cs" />
-    <Compile Include="Osoby\OsobaPieniezna\Czy_OsobaPieniezna_OdejmnijNaleznoscOsobie_ObliczaPoprawnie.cs" />
+    <Compile Include="Osoby\OsobaPieniezna\Czy_OsobaPieniezna_ZmienWplate_ZmieniaPoprawnie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\Czy_TabelaNaleznosciPienieznej_DodajNalzenoscKmorkiIUaktualnijKryterium.cs" />
-    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\Czy_TabelaNaleznosciPienieznej_KryteriumWyboruTabeliNaleznosci.cs" />
-    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\Czy_TabelaNaleznosciPienieznej_Rozmiar.cs" />
-    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\Czy_TabelaNaleznosciPienieznej_ZwrocLepszeKryterium.cs" />
+    <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\Czy_PolozenieWTabeliNaleznosci_CzyKoordynatyDiagonalne.cs" />
+    <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\Czy_PolozenieWTabeliNaleznosci_CzyKoordynatyGorntrojkatne.cs" />
     <Compile Include="TablicaOsob\Czy_TablicaOsobPienieznych_WezIloscOsob.cs" />
     <Compile Include="TablicaOsob\Czy_TablicaOsobPienieznych_WyrownajNaleznosciPomiedzyOsobami.cs" />
   </ItemGroup>
@@ -129,6 +137,7 @@
   <ItemGroup>
     <Analyzer Include="..\..\..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

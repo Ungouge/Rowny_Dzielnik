@@ -41,32 +41,5 @@ namespace Dzielnik.Testy.Zasoby.TabliceOsob
                 yield return osobaAtrapa;
             }
         }
-
-        public static ITablicaOsobPienieznych Stworz_GetEnumerator_WezIloscOsob_Mock(int[] swiadczeniaPieniezne)
-        {
-            Mock<ITablicaOsobPienieznych> tablicaOsobOczekiwane = new Mock<ITablicaOsobPienieznych>();
-
-            tablicaOsobOczekiwane.
-                Setup(x => x.GetEnumerator()).
-                Returns(WyliczOsoby(swiadczeniaPieniezne));
-
-            tablicaOsobOczekiwane.
-                Setup(x => x.WezIloscOsob).
-                Returns((byte)swiadczeniaPieniezne.Length);
-
-            return tablicaOsobOczekiwane.Object;
-        }
-
-        private static IEnumerator<IOsobaPieniezna> WyliczOsoby(int[] NaleznosciPieniezneWGroszach)
-        {
-            for (byte iD = 0; iD < NaleznosciPieniezneWGroszach.Length; iD++)
-            {
-                INaleznoscPieniezna naleznoscPieniezna = Stworz_NaleznoscPieniezna.Stworz(NaleznosciPieniezneWGroszach[iD]);
-
-                IOsobaPieniezna osobaAtrapa = Stworz_OsobaPieniezna_Mock.Stworz_Wpalta_ID_Mock(naleznoscPieniezna, iD);
-
-                yield return osobaAtrapa;
-            }
-        }
     }
 }       

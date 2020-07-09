@@ -44,27 +44,20 @@ namespace Dzielnik.Testy.Zasoby.TablicaOsob
             ITablicaOsobPienieznychIterowalna tablicaOsobObliczonych = tablicaOsobPoczatkowe.PrzekazNaleznosciPomiedzyOsobami(osobaKorzen, osobaPotomek, naleznoscDoWymiany);
 
             //Asercja
-            Assert.True(SprawdzCzyTabliceOsobRowne(tablicaOsobOczekiwane, tablicaOsobObliczonych));
-        }
+            IEnumerator<IOsobaSwiadczeniePieniezne> enumeratorObliczonychOsob = tablicaOsobObliczonych.GetEnumerator();
 
-        private static bool SprawdzCzyTabliceOsobRowne(IEnumerable<IOsobaPieniezna> tablicaOsobOczekiwane, IEnumerable<IOsobaPieniezna> tablicaOsobObliczonych)
-        {
-            IEnumerator<IOsobaPieniezna> enumeratorObliczonychOsob = tablicaOsobObliczonych.GetEnumerator();
-
-            IEnumerator<IOsobaPieniezna> enumeratorOczekiwanychOsob = tablicaOsobOczekiwane.GetEnumerator();
+            IEnumerator<IOsobaSwiadczeniePieniezne> enumeratorOczekiwanychOsob = tablicaOsobOczekiwane.GetEnumerator();
 
             while (enumeratorObliczonychOsob.MoveNext() && enumeratorOczekiwanychOsob.MoveNext())
             {
-                IOsobaPieniezna osobaObliczona = enumeratorObliczonychOsob.Current;
+                IOsobaSwiadczeniePieniezne osobaObliczona = enumeratorObliczonychOsob.Current;
 
-                IOsobaPieniezna osobaOczekiwana = enumeratorOczekiwanychOsob.Current;
+                IOsobaSwiadczeniePieniezne osobaOczekiwana = enumeratorOczekiwanychOsob.Current;
 
-                if (osobaObliczona.ID == osobaOczekiwana.ID)
-                    if (osobaObliczona.Wplata.Swiadczenie != osobaOczekiwana.Wplata.Swiadczenie)
-                        return false;
+                Assert.Equal(osobaObliczona.ID, osobaOczekiwana.ID);
+
+                Assert.Equal(osobaObliczona.Wplata.Swiadczenie, osobaOczekiwana.Wplata.Swiadczenie);
             }
-
-            return true;
         }
     }
 }

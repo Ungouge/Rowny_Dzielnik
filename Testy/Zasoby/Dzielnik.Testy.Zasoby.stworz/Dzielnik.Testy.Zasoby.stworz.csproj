@@ -39,6 +39,15 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'modelWidoku %28testy i debug%29|AnyCPU'">
+    <OutputPath>bin\modelWidoku %28testy i debug%29\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,18 +60,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="KryteriumWyboru\PolozeniaWymianWtabeli_Generator.cs" />
-    <Compile Include="KryteriumWyboru\stworz_KryteriumWyboruTabeliNaleznosciPienieznych\Stworz_KryteriumIlosciWymian.cs" />
-    <Compile Include="KryteriumWyboru\stworz_KryteriumWyboruTabeliNaleznosciPienieznych\Stworz_KryteriumSumyWymienionejNaleznosciPienieznej.cs" />
-    <Compile Include="KryteriumWyboru\stworz_KryteriumWyboruTabeliNaleznosciPienieznych\Stworz_KryteriumWyboruTabeliNaleznosciPienieznych.cs" />
+    <Compile Include="KryteriumWyboru\stworz_KryteriumWymienionejNaleznosciPienieznej\Stworz_KryteriumIlosciWymian.cs" />
+    <Compile Include="KryteriumWyboru\stworz_KryteriumWymienionejNaleznosciPienieznej\Stworz_KryteriumWymienionejNaleznosciPienieznej.cs" />
+    <Compile Include="KryteriumWyboru\stworz_KryteriumWymienionejNaleznosciPienieznej\Stworz_KryteriumSumyWymienionejNaleznosciPienieznej.cs" />
     <Compile Include="Naleznosci\naleznosciPieniezne\Stworz_NaleznoscPieniezna.cs" />
     <Compile Include="Naleznosci\naleznosciPieniezne\Stworz_NaleznoscPienieznaDiagonalna.cs" />
     <Compile Include="Naleznosci\naleznosciPieniezne\Stworz_NaleznoscPienieznaZerowa.cs" />
     <Compile Include="Osoby\osobaPieniezna\Stworz_OsobaPieniezna.cs" />
-    <Compile Include="PolozenieWTabeliNaleznosci\Stworz_PolozeniaWTabeliNaleznosci.cs" />
+    <Compile Include="TabelaNaleznosci\Stworz_PolozeniaWTabeliNaleznosci.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\DeklaracjaPrzyjazniTestow.cs" />
-    <Compile Include="TabeleNaleznosci\Stworz_TabelaNaleznosciPienieznej.cs" />
-    <Compile Include="TabeleNaleznosci\Stworz_TabelaNaleznosciPienieznejNull.cs" />
     <Compile Include="TabliceOsob\tablicaOsobPienieznych\Stworz_TablicaOsobPienieznych.cs" />
   </ItemGroup>
   <ItemGroup>

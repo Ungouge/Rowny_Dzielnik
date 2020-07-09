@@ -5,23 +5,35 @@ using Dzielnik.Testy.Zasoby.Naleznosci;
 using Dzielnik.Zasoby.Fabryki;
 using Dzielnik.Zasoby.Interfejsy.Fabryki;
 using Dzielnik.Zasoby.Interfejsy.Naleznosci;
+using Dzielnik.Zasoby.Interfejsy.Osoby;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
 namespace Dzielnik.Testy.TablicaOsob
 {
     public static class Stworz_TablicaOsobPienieznych
     {
-        private static readonly IFabrykaTablicaOsobPienieznych fabrykaTablicaOsob = new FabrykaTablicaOsobPienieznych(new FabrykaOsobaPieniezna());
+        private static readonly IFabrykaOsobaPieniezna fabrykaOsobaPieniezna = new FabrykaOsobaPieniezna();
+
+        private static readonly IFabrykaTablicaOsobPienieznych fabrykaTablicaOsob = new FabrykaTablicaOsobPienieznych();
 
         public static ITablicaOsobPienieznych Stworz(int[] wpaltyWGroszach)
         {
-            return fabrykaTablicaOsob.StworzTablicaOsob(WyliczNaleznosci(wpaltyWGroszach).ToArray());
+            return fabrykaTablicaOsob.StworzTablicaOsob(StworzSzeregOsob(wpaltyWGroszach));
         }
 
-        private static IEnumerable<INaleznoscPieniezna> WyliczNaleznosci(int[] wpaltyWGroszach)
+        private static IOsobaPieniezna[] StworzSzeregOsob(int[] wpaltyWGroszach)
         {
-            foreach (int wplataWGroszach in wpaltyWGroszach)
-                yield return Stworz_NaleznoscPieniezna.Stworz(wplataWGroszach);
+            return WyliczOsoby(wpaltyWGroszach).ToArray();
+        }
+
+        private static IEnumerable<IOsobaPieniezna> WyliczOsoby(int[] wplatyWGroszach)
+        {
+            for (byte iD = 0; iD < wplatyWGroszach.Length; iD++)
+            {
+                INaleznoscPieniezna naleznoscPieniezna = Stworz_NaleznoscPieniezna.Stworz(wplatyWGroszach[iD]);
+
+                yield return fabrykaOsobaPieniezna.StworzOsoba(iD, naleznoscPieniezna);
+            }
         }
     }
 }
