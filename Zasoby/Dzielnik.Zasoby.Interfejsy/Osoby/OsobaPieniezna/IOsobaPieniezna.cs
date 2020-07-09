@@ -3,18 +3,13 @@
 namespace Dzielnik.Zasoby.Interfejsy.Osoby
 {
     /// <summary>
-    /// Interfejs dla osob mogacych dodawac i odejmowac naleznosci w swiadczeniu pienieznym.
+    /// Interfejs dla osob ktorym mozna wymieniac naleznosc ze swiadczeniem pienieznym w uzywanych kolekcjach.
     /// </summary>
     public interface IOsobaPieniezna : IOsobaSwiadczeniePieniezne
     {
         /// <summary>
-        /// Zwraca nowa osobe z naleznoscia pieniezna dopowiadajaca sumie naleznosci tej osoby i danej.
+        /// Zwroc nowa osobe z podana wplata pieniezna.
         /// </summary>
-        IOsobaPienieznaWymienna DodajNaleznoscPienieznaOsobie(INaleznoscPieniezna naleznosc);
-
-        /// <summary>
-        /// Zwraca nowa osobe z naleznoscia pieniezna dopowiadajaca roznicy danej naleznosci odjetej od naleznosci tej osoby.
-        /// </summary>
-        IOsobaPienieznaWymienna OdejmnijNaleznoscPienieznaOsobie(INaleznoscPieniezna naleznosc);
+        IOsobaPieniezna ZmienWplate(INaleznoscPieniezna nowaNaleznosc);
     }
 }
