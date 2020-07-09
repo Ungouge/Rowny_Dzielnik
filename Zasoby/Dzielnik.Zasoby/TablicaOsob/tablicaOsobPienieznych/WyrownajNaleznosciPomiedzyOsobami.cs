@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-using Dzielnik.Zasoby.Interfejsy.Naleznosci;
+﻿using Dzielnik.Zasoby.Interfejsy.Naleznosci;
 using Dzielnik.Zasoby.Interfejsy.Osoby;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
@@ -8,23 +6,31 @@ namespace Dzielnik.Zasoby.TablicaOsob
 {
     partial class TablicaOsobPienieznych: ITablicaOsobPienieznychIterowalna
     {
-        public ITablicaOsobPienieznych PrzekazNaleznosciPomiedzyOsobami(IOsobaID osobaKorzen, IOsobaID osobaPotomek, INaleznoscPieniezna naleznoscPieniezna)
+        public ITablicaOsobPienieznych PrzekazNaleznosciPomiedzyOsobami(IOsobaID osobaKorzen, IOsobaID osobaPotomek, INaleznoscPieniezna naleznosc)
         {
-            return new TablicaOsobPienieznych(WyliczOsobyZWymienionymiNaleznosciami(osobaKorzen, osobaPotomek, naleznoscPieniezna));
+            return new TablicaOsobPienieznych(OsobyZWymienionymiNaleznosciami(osobaKorzen.ID, osobaPotomek.ID, naleznosc));
         }
 
-        private IEnumerable<IOsobaPienieznaWymienna> WyliczOsobyZWymienionymiNaleznosciami(IOsobaID osobaKorzen, IOsobaID osobaPotomek,
-            INaleznoscPieniezna naleznoscPieniezna)
+        private IOsobaPieniezna[] OsobyZWymienionymiNaleznosciami(byte iDOsobaKorzen, byte iDOsobaPotomek,
+            INaleznoscPieniezna naleznosc)
         {
-            foreach (IOsobaPienieznaWymienna osoba in osoby)
-            {
-                if (osoba.CzyToTaSamaOsoba(osobaKorzen))
-                    yield return osoba.OdejmnijNaleznoscPienieznaOsobie(naleznoscPieniezna);
-                else if (osoba.CzyToTaSamaOsoba(osobaPotomek))
-                    yield return osoba.DodajNaleznoscPienieznaOsobie(naleznoscPieniezna);
-                else
-                    yield return osoba;
-            }
+            IOsobaPieniezna[] nowaTablica = new IOsobaPieniezna[osoby.Length];
+
+            for (int iD = 0; iD < nowaTablica.Length; iD++)
+                nowaTablica[iD] = WymienNaleznoscOsobie(osoby[iD], iDOsobaKorzen, iDOsobaPotomek, naleznosc);
+
+            return nowaTablica;
+        }
+
+        private IOsobaPieniezna WymienNaleznoscOsobie(IOsobaPieniezna porownywanaOsoba, byte iDOsobaKorzen, byte iDOsobaPotomek, INaleznoscPieniezna naleznosc)
+        {
+            if (porownywanaOsoba.ID == iDOsobaKorzen)
+                return porownywanaOsoba.ZmienWplate(porownywanaOsoba.Wplata.Roznica(naleznosc));
+            
+            if (porownywanaOsoba.ID == iDOsobaPotomek)
+                return porownywanaOsoba.ZmienWplate(porownywanaOsoba.Wplata.Suma(naleznosc));
+
+            return porownywanaOsoba;
         }
     }
 }

@@ -5,19 +5,11 @@ namespace Dzielnik.Zasoby.TablicaOsob
 {
     partial class TablicaOsobPienieznych : ITablicaOsobPienieznychZwrotna
     {
-        IOsobaWymiennaBaza ITablicaOsobZwrotna.this[byte iD]
+        public IOsobaPieniezna this[IOsobaID osobaID]
         {
             get
             {
-                return (this as ITablicaOsobPienieznychZwrotna)[iD] as IOsobaPienieznaWymienna;
-            }
-        }
-
-        public IOsobaPienieznaWymienna this[byte iD]
-        {
-            get
-            {
-                return osoby[iD];
+                return osoby[osobaID.ID];
             }
         }
     }

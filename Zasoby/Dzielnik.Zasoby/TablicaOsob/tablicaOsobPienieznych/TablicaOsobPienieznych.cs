@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 using Dzielnik.Zasoby.Interfejsy.Osoby;
@@ -12,14 +11,14 @@ namespace Dzielnik.Zasoby.TablicaOsob
     /// </summary>
     internal partial class TablicaOsobPienieznych : ITablicaOsobPienieznych
     {
-        private readonly IOsobaPienieznaWymienna[] osoby;
+        private readonly IOsobaPieniezna[] osoby;
 
-        internal TablicaOsobPienieznych(IEnumerable<IOsobaPienieznaWymienna> wyliczoneOsoby)
+        internal TablicaOsobPienieznych(IOsobaPieniezna[] szeregOsob)
         {
-            if (wyliczoneOsoby.Count() > Byte.MaxValue)
-                wyliczoneOsoby = wyliczoneOsoby.Take<IOsobaPienieznaWymienna>(Byte.MaxValue);
+            if (szeregOsob.Count() >= Byte.MaxValue)
+                Array.Resize(ref szeregOsob, Byte.MaxValue - 1);
 
-            osoby = wyliczoneOsoby.ToArray<IOsobaPienieznaWymienna>();
+            osoby = szeregOsob;
         }
     }
 }
