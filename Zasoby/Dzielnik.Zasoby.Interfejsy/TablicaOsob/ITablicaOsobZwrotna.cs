@@ -5,8 +5,8 @@ namespace Dzielnik.Zasoby.Interfejsy.TablicaOsob
     /// <summary>
     /// Interfejs bazowy dla tablic osob zwracajacych osobe o danym ID.
     /// </summary>
-    public interface ITablicaOsobZwrotna : ITablicaOsobBaza
+    public interface ITablicaOsobZwrotna<TOsobaTypSwiadczenia> : ITablicaOsobBaza where TOsobaTypSwiadczenia : IOsobaTypSwiadczenia
     {
-        IOsobaWymiennaBaza this[byte iD] { get; }
+        TOsobaTypSwiadczenia this[IOsobaID osobaID] { get; }
     }
 }

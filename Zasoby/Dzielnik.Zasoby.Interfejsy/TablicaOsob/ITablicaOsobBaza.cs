@@ -1,4 +1,5 @@
-﻿
+﻿using System.Collections.Generic;
+
 namespace Dzielnik.Zasoby.Interfejsy.TablicaOsob
 {
     /// <summary>

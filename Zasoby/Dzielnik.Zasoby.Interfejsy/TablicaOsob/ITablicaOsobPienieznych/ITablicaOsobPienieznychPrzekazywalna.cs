@@ -6,7 +6,7 @@ namespace Dzielnik.Zasoby.Interfejsy.TablicaOsob
     /// <summary>
     /// Intefejs dla tablic osob wyronujacych 
     /// </summary>
-    public interface ITablicaOsobPienieznychPrzekazywalna : ITablicaOsob
+    public interface ITablicaOsobPienieznychPrzekazywalna : ITablicaOsob<IOsobaPieniezna>
     {
         /// <summary>
         /// Zwraca nowa tablice osob z przekazana wartosc naleznoci podanego swiadczenia pienieznego pomiedzy podanymi osobami podanych osob.
