@@ -57,6 +57,15 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'modelWidoku %28testy i debug%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\modelWidoku %28testy i debug%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -68,26 +77,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeklaracjaPrzyjazniTestow.cs" />
     <Compile Include="Fabryki\kryteriaWyboru\AbstrakcyjnaFabrykaKryteriumWyboruTabeliNaleznosciPienieznych.cs" />
-    <Compile Include="Fabryki\tabelaNaleznosci\FabrykaPolozeniaWTabeliNaleznosci.cs" />
     <Compile Include="Fabryki\kryteriaWyboru\FabrykaKryteriumWyboruTabeliNaleznosciPienieznychNull.cs" />
     <Compile Include="Fabryki\naleznosci\naleznoscPieniezne\AbstrakcyjnaFabrykaNaleznosciPienieznejDlaTabeliNaleznosci.cs" />
     <Compile Include="Fabryki\naleznosci\naleznoscPieniezne\FabrykaNaleznoscpienieznaDiagonalna.cs" />
     <Compile Include="Fabryki\naleznosci\naleznoscPieniezne\FabrykaNaleznoscPieniezna.cs" />
     <Compile Include="Fabryki\osoby\osobaPieniezna\FabrykaOsobaPieniezna.cs" />
-    <Compile Include="Fabryki\tabelaNaleznosci\FabrykaTabelaNalezosciPienieznej.cs" />
-    <Compile Include="Fabryki\tabelaNaleznosci\FabrykaTabelaNalezosciPienieznejNull.cs" />
-    <Compile Include="Fabryki\tabliceOsob\tablicaOsobPieniezna\FabrykaTablicaOsobPienieznych.cs" />
     <Compile Include="Fabryki\naleznosci\naleznoscPieniezne\FabrykaNaleznoscPienieznaZerowa.cs" />
-    <Compile Include="KryteriumWyboru\kryteriumIlosciWymian\CzyPorownywaneKyrteriumLepsze.cs" />
-    <Compile Include="KryteriumWyboru\kryteriumIlosciWymian\DodajPolozenieZmienionejNaleznosci.cs" />
-    <Compile Include="KryteriumWyboru\kryteriumIlosciWymian\KryteriumIlosciWymian.cs" />
-    <Compile Include="KryteriumWyboru\kryteriumSumyWymienionejNaleznosciPienieznej\CzyPorownywaneKyrteriumLepsze.cs" />
-    <Compile Include="KryteriumWyboru\kryteriumSumyWymienionejNaleznosciPienieznej\DodajNaleznoscDoSumyWymienionejNaleznosci.cs" />
-    <Compile Include="KryteriumWyboru\kryteriumSumyWymienionejNaleznosciPienieznej\KryteriumSumyWymienionejNaleznosciPienieznej.cs" />
-    <Compile Include="KryteriumWyboru\KryteriumWyboruTabeliNaleznosciPienieznych\KryteriumWyboruTabeliNaleznosciPienieznychNull.cs" />
-    <Compile Include="KryteriumWyboru\KryteriumWyboruTabeliNaleznosciPienieznejBaza.cs" />
+    <Compile Include="Fabryki\FabrykaPolozeniaWTabeliNaleznosci.cs" />
+    <Compile Include="Fabryki\tabliceOsob\tablicaOsobPieniezna\FabrykaTablicaOsobPienieznych.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznych\kryteriumIlosciWymian\CzyPorownywaneKyrteriumLepsze.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznych\kryteriumIlosciWymian\DodajPolozenieZmienionejNaleznosci.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznych\kryteriumIlosciWymian\KryteriumIlosciWymian.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznych\kryteriumSumyWymienionejNaleznosciPienieznej\CzyPorownywaneKyrteriumLepsze.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznych\kryteriumSumyWymienionejNaleznosciPienieznej\DodajNaleznoscDoSumyWymienionejNaleznosci.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznych\kryteriumSumyWymienionejNaleznosciPienieznej\KryteriumSumyWymienionejNaleznosciPienieznej.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznych\KryteriumWyboruTabeliNaleznosciPienieznychNull.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznych\KryteriumWyboruTabeliNaleznosciPienieznychBaza.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznych\KryteriumWymienionejNaleznosciPienieznejBaza.cs" />
     <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPienieznaZerowa\CzyWieksze.cs" />
     <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPienieznaZerowa\Odwrotnosc.cs" />
     <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPienieznaZerowa\Roznica.cs" />
@@ -101,22 +108,17 @@
     <Compile Include="Naleznosci\NaleznoscPieniezna\NaleznoscPieniezna\Suma.cs" />
     <Compile Include="Osoby\OsobaID.cs" />
     <Compile Include="Osoby\OsobaPieniezna\OsobaPieniezna.cs" />
+    <Compile Include="Osoby\OsobaPieniezna\ZmienWplate.cs" />
     <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\CzyKoordynatyDiagonalne.cs" />
     <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\CzyKoordynatyGorntrojkatne.cs" />
-    <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\polozenieDolntrojkatneWTabeliKomorek.cs" />
-    <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\polozenieGornotrojkatneWTabeliKomorek.cs" />
     <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\polozenieGornotrojkatneWTabeliNaleznosci.cs" />
     <Compile Include="TabelaNaleznosci\polozenieWTabeliNaleznosci\PolozenieWTabeliNaleznosci.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\DeklaracjaPrzyjazniTestow.cs" />
-    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznejNull\TabelaNaleznosciPienieznejNull.cs" />
-    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\TabelaNaleznosciPienieznej.cs" />
-    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\tenIndekstatorPolozenia.cs" />
-    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\UstalWartoscWTabeliNaleznosci.cs" />
-    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\ZwrocLepszeKryterium.cs" />
     <Compile Include="TablicaOsob\tablicaOsobPienieznych\GetEnumerator.cs" />
     <Compile Include="TablicaOsob\tablicaOsobPienieznych\TablicaOsobPienieznych.cs" />
     <Compile Include="TablicaOsob\tablicaOsobPienieznych\tenIndeksatorID.cs" />
+    <Compile Include="TablicaOsob\tablicaOsobPienieznych\WezIloscOsob.cs" />
     <Compile Include="TablicaOsob\tablicaOsobPienieznych\WyrownajNaleznosciPomiedzyOsobami.cs" />
   </ItemGroup>
   <ItemGroup>

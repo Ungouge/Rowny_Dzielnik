@@ -1,4 +1,4 @@
-﻿using Dzielnik.Zasoby.Interfejsy.Naleznosci;
+﻿using Dzielnik.Zasoby.Interfejsy.Osoby;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
 namespace Dzielnik.Zasoby.Interfejsy.Fabryki
@@ -9,8 +9,8 @@ namespace Dzielnik.Zasoby.Interfejsy.Fabryki
     public interface IFabrykaTablicaOsobPienieznych: IFabrykaTablicaOsobBaza
     {
         /// <summary>
-        /// Stworz instancje tablicy osob pienieznych.
+        /// Stworz instancje tablicy osob pienieznych dla osob.
         /// </summary>
-        ITablicaOsobPienieznych StworzTablicaOsob(INaleznoscPieniezna[] wplaty);
+        ITablicaOsobPienieznych StworzTablicaOsob(IOsobaPieniezna[] szeregOsob);
     }
 }
