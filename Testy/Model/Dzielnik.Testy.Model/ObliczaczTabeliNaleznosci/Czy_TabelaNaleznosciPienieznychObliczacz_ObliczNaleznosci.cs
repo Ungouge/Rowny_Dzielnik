@@ -5,6 +5,7 @@ using Dzielnik.Model.Interfejsy.TablicaOsobKoncowaPrefabrykator;
 using Dzielnik.Testy.Model.NajlepszaWymianaZnajdywacz;
 using Dzielnik.Testy.Model.TablicaOsobKoncowaPrefabrykator;
 using Dzielnik.Testy.Zasoby.TabliceOsob;
+using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
 using Moq;
@@ -30,11 +31,14 @@ namespace Dzielnik.Testy.Model.ObliczaczTabeliNaleznosci
 
             ITablicaOsobPienieznych tablicaOsob = Stworz_TablicaOsobPienieznych_Mock.Stworz_Mock();
 
+            KryteriumWyboruTabeliNaleznosciWylicznik kryteriumWyboruTabeliNaleznosciWylicznik = default(KryteriumWyboruTabeliNaleznosciWylicznik);
+
             //Dzialaj
-            Obliczacz.ObliczNaleznosci(tablicaOsob);
+            Obliczacz.ObliczNaleznosci(tablicaOsob, kryteriumWyboruTabeliNaleznosciWylicznik);
 
             //Asercja
             znajdywacz_Mock.Verify(znajdywacz => znajdywacz.Znajdz(It.IsAny<ITablicaOsobPienieznych>()), Times.Once );
+
             prefabrykator_Mock.Verify(prefabrykator => prefabrykator.StworzTablicaKoncowa(It.IsAny<ITablicaOsobPienieznych>()), Times.Once);
         }
     }

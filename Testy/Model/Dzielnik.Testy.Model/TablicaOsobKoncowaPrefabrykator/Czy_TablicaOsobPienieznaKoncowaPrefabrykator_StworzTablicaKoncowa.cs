@@ -1,7 +1,8 @@
 ﻿using System;
 
 using Dzielnik.Model.Interfejsy.TablicaOsobKoncowaPrefabrykator;
-using Dzielnik.Testy.Zasoby.TabliceOsob;
+using Dzielnik.Testy.TablicaOsob;
+using Dzielnik.Zasoby.Interfejsy.Osoby;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
 using Xunit;
@@ -41,15 +42,22 @@ namespace Dzielnik.Testy.Model.TablicaOsobKoncowaPrefabrykator
             //Ustal
             ITablicaOsobPienieznaKoncowaPrefabrykator tablicaosobKoncowaPrefabrykator = Stworz_TablicaOsobPienieznaKoncowaPrefabrykator.Stworz();
 
-            ITablicaOsobPienieznychZwrotna tablicaOsobPienieznychPoczatkowa = 
-                Stworz_TablicaOsobPienieznych_Mock.Stworz_GetEnumerator_WezIloscOsob_Mock(tabelaSwiadczenPoczatkowa);
+            ITablicaOsobPienieznych tablicaOsobPienieznychPoczatkowa = Stworz_TablicaOsobPienieznych.Stworz(tabelaSwiadczenPoczatkowa);
 
             //Dzialaj
-            ITablicaOsobPienieznychZwrotna tablicaOsobPienieznychKoncowa = tablicaosobKoncowaPrefabrykator.StworzTablicaKoncowa(tablicaOsobPienieznychPoczatkowa);
+            ITablicaOsobPienieznych tablicaOsobPienieznychKoncowa = tablicaosobKoncowaPrefabrykator.StworzTablicaKoncowa(tablicaOsobPienieznychPoczatkowa);
 
             //Asercja
-            for (byte iD = 0; iD < tablicaOsobPienieznychKoncowa.WezIloscOsob; iD++)
-                Assert.Equal(tabelaSwiadczenOczekiwana[iD], tablicaOsobPienieznychKoncowa[iD].Wplata.Swiadczenie);
+            Assert.Collection(tablicaOsobPienieznychKoncowa,
+                osoba => { DowiedzRownosci(tabelaSwiadczenOczekiwana[0], osoba); },
+                osoba => { DowiedzRownosci(tabelaSwiadczenOczekiwana[1], osoba); },
+                osoba => { DowiedzRownosci(tabelaSwiadczenOczekiwana[2], osoba); },
+                osoba => { DowiedzRownosci(tabelaSwiadczenOczekiwana[3], osoba); } );
+        }
+
+        private static void DowiedzRownosci(int swiadczenOczekiwanea, IOsobaSwiadczeniePieniezne osoba)
+        {
+            Assert.Equal(swiadczenOczekiwanea, osoba.Wplata.Swiadczenie);
         }
     }
 }

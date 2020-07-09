@@ -2,7 +2,6 @@
 
 using Dzielnik.Model.Interfejsy.TabeleNaleznosci;
 using Dzielnik.Model.Interfejsy.NajlepszaWymianaZnajdywacz;
-using Dzielnik.Testy.Model.TablicaOsobKoncowaPrefabrykator;
 using Dzielnik.Testy.TablicaOsob;
 using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
@@ -58,6 +57,7 @@ namespace Dzielnik.Testy.Model.NajlepszaWymianaZnajdywacz
         [InlineData(new int[] { 22, 21, 19, 18 }, new int[] { 0 }, new int[] { 1, 0 }, new int[] { 1, 1, 0 })]
         [InlineData(new int[] { 96, 16, 16, 0 }, new int[] { 16 }, new int[] { 16, 0 }, new int[] { 32, 0, 0 })]
         [InlineData(new int[] { 0, 320, 357, 0 }, new int[] { -151 }, new int[] { -19, 0 }, new int[] { 0, 0, 169 })]
+        [InlineData(new int[] { 400, 300, 200, 100 }, new int[] { 0 }, new int[] { 50, 0 }, new int[] { 100, 50, 0 })]
         [InlineData(new int[] { 5, 8, 0, 3 }, new int[] { 0 }, new int[] { 1, 3 }, new int[] { 0, 1, 0 })]
         [InlineData(new int[] { 5, 0, 0, 0, 0 }, new int[] { 1 }, new int[] { 1, 0 }, new int[] { 1, 0, 0 }, new int[] { 1, 0, 0, 0 })]
         [InlineData(new int[] { 22, 21, 20, 19, 18 }, new int[] { 0 }, new int[] { 0, 0 }, new int[] { 1, 0, 0 }, new int[] { 1, 1, 0, 0 })]

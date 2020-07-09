@@ -13,7 +13,8 @@ namespace Dzielnik.Testy.Model.ObliczaczTabeliNaleznosci
 
             fabryka_Mock.
                 Setup(fabryka => fabryka.StworzObliczaczTabeliNaleznosciPienieznych()).
-                Returns(Obliczacz_Mock.Object);
+                Returns(Obliczacz_Mock.Object).
+                Verifiable();
 
             return fabryka_Mock;
         }

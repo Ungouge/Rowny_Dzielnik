@@ -19,7 +19,7 @@ namespace Dzielnik.Testy.Model.NajlepszaWymianaZnajdywacz
             ITablicaOsobPienieznych koncowaTablicaOsob =
                     Stworz_TablicaOsobPienieznaKoncowaPrefabrykator.Stworz().StworzTablicaKoncowa(poczatkowaTablicaOsob);
 
-            IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz fabryka =
+            IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada fabryka =
                 Stworz_IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz_Mock.Stworz(koncowaTablicaOsob.WezIloscOsob, kryteriumWyboruTabeliNaleznosci);
 
             INajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz najwiekszaMozliwaNaleznoscDoWymianyUstalacz =
@@ -30,6 +30,5 @@ namespace Dzielnik.Testy.Model.NajlepszaWymianaZnajdywacz
 
             return new NajlepszaWymianaNalezosciPienieznejZnajdywacz(fabryka, najwiekszaMozliwaNaleznoscDoWymianyUstalacz, rozniceDoStanuKwitaSumator);
         }
-
     }
 }

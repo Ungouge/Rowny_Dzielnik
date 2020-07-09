@@ -1,6 +1,6 @@
 ﻿using Dzielnik.Model.Interfejsy.Fabryki;
 using Dzielnik.Model.Interfejsy.NajlepszaWymianaZnajdywacz;
-using Dzielnik.Model.Interfejsy.TablicaOsobKoncowaPrefabrykator;
+using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
 using Moq;
@@ -14,7 +14,7 @@ namespace Dzielnik.Testy.Model.ObliczaczTabeliNaleznosci
             Mock<IFabrykaDlaTabelaNaleznosciPienieznychObliczacz> fabryka_Mock = new Mock<IFabrykaDlaTabelaNaleznosciPienieznychObliczacz>();
 
             fabryka_Mock.
-                Setup(fabryka => fabryka.StworzNajlepszaWymianaNalezosciPienieznejZnajdywacz(It.IsAny<ITablicaOsobPienieznych>())).
+                Setup(fabryka => fabryka.StworzNajlepszaWymianaNalezosciPienieznejZnajdywacz(It.IsAny<ITablicaOsobPienieznych>(), It.IsAny<KryteriumWyboruTabeliNaleznosciWylicznik>())).
                 Returns(Znajdywacz_Mock.Object);
 
             return fabryka_Mock.Object;

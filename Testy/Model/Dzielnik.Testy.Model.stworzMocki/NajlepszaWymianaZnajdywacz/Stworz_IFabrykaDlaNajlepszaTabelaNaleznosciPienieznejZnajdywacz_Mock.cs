@@ -1,10 +1,7 @@
 ﻿using Dzielnik.Model.Interfejsy.Fabryki;
-using Dzielnik.Testy.Model.DoStanuKwitaSumator;
-using Dzielnik.Testy.Model.NajwiekszaMozliwaNaleznoscDoWymianyUstalacz;
 using Dzielnik.Testy.Model.TabeleNaleznosci;
 using Dzielnik.Testy.Zasoby.TabelaNaleznosci;
 using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
-using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
 using Moq;
 
@@ -13,10 +10,10 @@ namespace Dzielnik.Testy.Model.NajlepszaWymianaZnajdywacz
 {
     public static class Stworz_IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz_Mock
     {
-        internal static IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz Stworz(byte iloscOsob, KryteriumWyboruTabeliNaleznosciWylicznik kryteriumWyboruTabeliNaleznosci)
+        internal static IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada Stworz(byte iloscOsob, KryteriumWyboruTabeliNaleznosciWylicznik kryteriumWyboruTabeliNaleznosci)
         {
-            Mock<IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz> fabryka_Mock =
-                new Mock<IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz>
+            Mock<IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada> fabryka_Mock =
+                new Mock<IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada>
             {
                 CallBase = true
             };
