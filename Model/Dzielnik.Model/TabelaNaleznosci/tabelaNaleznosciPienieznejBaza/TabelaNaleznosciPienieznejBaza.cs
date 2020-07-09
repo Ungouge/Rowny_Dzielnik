@@ -1,10 +1,9 @@
 ﻿using Dzielnik.Zasoby.Interfejsy.Fabryki;
-using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 
 namespace Dzielnik.Model.TabelaNaleznosci
 {
     /// <summary>
-    /// abstrakcyjna 
+    /// Abstrakcyjna klasa dla dwuwymiarowych tabeli zawierajacych naleznosci pieniezne osob względem siebie.
     /// </summary>
     internal abstract partial class TabelaNaleznosciPienieznejBaza
     {

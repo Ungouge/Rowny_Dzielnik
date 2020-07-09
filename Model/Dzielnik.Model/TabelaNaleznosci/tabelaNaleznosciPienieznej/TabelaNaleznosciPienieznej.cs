@@ -6,7 +6,7 @@ using Dzielnik.Zasoby.Interfejsy.Naleznosci;
 namespace Dzielnik.Model.TabelaNaleznosci
 {
     /// <summary>
-    /// Dwuwymiarowa tabela zawierajacych naleznosci pienieznej osobom względem siebie.
+    /// Dwuwymiarowa tabela zawierajaca naleznosci pieniezne osob względem siebie.
     /// </summary>
     internal partial class TabelaNaleznosciPienieznej : TabelaNaleznosciPienieznejBaza, ITabelaNaleznosciPienieznej
     {

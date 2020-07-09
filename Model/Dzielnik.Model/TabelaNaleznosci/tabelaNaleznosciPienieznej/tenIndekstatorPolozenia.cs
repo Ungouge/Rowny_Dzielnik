@@ -1,6 +1,5 @@
 ﻿using System;
 
-using Dzielnik.Model.Interfejsy.TabeleNaleznosci;
 using Dzielnik.Zasoby.Interfejsy.Naleznosci;
 using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
 
@@ -8,6 +7,14 @@ namespace Dzielnik.Model.TabelaNaleznosci
 {
     partial class TabelaNaleznosciPienieznej
     {
+        INaleznoscSwiadczenieBaza ITabelaNaleznosciZwrotna.this[IPolozenieWTabeliNaleznosci polozenieWTabeli]
+        {
+            get
+            {
+                return this[polozenieWTabeli as IPolozenieGornotrojkatneWTabeliNaleznosci];
+            }
+        }
+
         public override INaleznoscPienieznaSwiadczenie this[IPolozenieWTabeliNaleznosci polozenieWTabeli]
         {
             get
