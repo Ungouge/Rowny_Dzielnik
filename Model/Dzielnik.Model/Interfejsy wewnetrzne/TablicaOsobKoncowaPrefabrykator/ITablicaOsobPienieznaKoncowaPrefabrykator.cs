@@ -10,6 +10,6 @@ namespace Dzielnik.Model.Interfejsy.TablicaOsobKoncowaPrefabrykator
         /// <summary>
         /// Tworzy tablice osob jaka jest oczekiwana pod koniec wyrownywania naleznosci.
         /// </summary>
-        ITablicaOsobPienieznych StworzTablicaKoncowa(ITablicaOsobPienieznychZwrotna tablicaOsob);
+        ITablicaOsobPienieznych StworzTablicaKoncowa(ITablicaOsobPienieznych tablicaOsob);
     }
 }

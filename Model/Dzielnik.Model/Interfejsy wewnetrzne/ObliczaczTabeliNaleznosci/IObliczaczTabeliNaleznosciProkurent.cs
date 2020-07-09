@@ -1,4 +1,5 @@
-﻿using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
+﻿using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
+using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
 namespace Dzielnik.Model.Interfejsy.ObliczaczTabeliNaleznosci
@@ -8,6 +9,6 @@ namespace Dzielnik.Model.Interfejsy.ObliczaczTabeliNaleznosci
     /// </summary>
     internal interface IObliczaczTabeliNaleznosciProkurent
     {
-        ITabelaNaleznosciZwrotna ObliczNaleznosci(ITablicaOsob tablicaOsob);
+        ITabelaNaleznosciZwrotna ObliczNaleznosci(ITablicaOsobBaza tablicaOsob, KryteriumWyboruTabeliNaleznosciWylicznik kryteriumWyboruTabeliNaleznosci);
     }
 }

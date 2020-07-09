@@ -1,4 +1,5 @@
-﻿using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
+﻿using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
+using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
 namespace Dzielnik.Model.Interfejsy.ObliczaczTabeliNaleznosci
@@ -11,6 +12,7 @@ namespace Dzielnik.Model.Interfejsy.ObliczaczTabeliNaleznosci
         /// <summary>
         /// Zwraca obliczone naleznosci dla podanej tabeli osob i obecnych ustawien.
         /// </summary>
-        ITabelaNaleznosciPienieznejZwrotna ObliczNaleznosci(ITablicaOsobPienieznych tablicaOsob);
+        ITabelaNaleznosciPienieznejZwrotna ObliczNaleznosci(ITablicaOsobPienieznych tablicaOsob,
+            KryteriumWyboruTabeliNaleznosciWylicznik kryteriumWyboruTabeliNaleznosci);
     }
 }
