@@ -10,6 +10,6 @@ namespace Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci
         /// <summary>
         /// Zwroc wartossc dwuwymiarowej tabeli zawierajaca naleznosci pienieznej podanego polozenia.
         /// </summary>
-        INaleznoscPienieznaSwiadczenie this[IPolozenieWTabeliNaleznosci polozenieWTabeli] { get; }
+        new INaleznoscPienieznaSwiadczenie this[IPolozenieWTabeliNaleznosci polozenieWTabeli] { get; }
     }
 }
