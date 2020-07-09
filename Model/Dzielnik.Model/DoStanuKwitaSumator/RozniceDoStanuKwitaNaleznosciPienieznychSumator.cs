@@ -14,16 +14,16 @@ namespace Dzielnik.Model.DoStanuKwitaSumator
     {
         private readonly ITablicaOsobPienieznychIterowalna tablicaOsobPoczatkowa;
 
-        public RozniceDoStanuKwitaNaleznosciPienieznychSumator(ITablicaOsobPienieznychIterowalna tablicaOsobPoczatkowa)
+        internal RozniceDoStanuKwitaNaleznosciPienieznychSumator(ITablicaOsobPienieznychIterowalna tablicaOsobPoczatkowa)
         {
             this.tablicaOsobPoczatkowa = tablicaOsobPoczatkowa;
         }
 
         public long SumujRoznice(ITablicaOsobPienieznychIterowalna tablicaOsob)
         {
-            IEnumerator<IOsobaPieniezna> enumerator1 = tablicaOsob.GetEnumerator();
+            IEnumerator<IOsobaSwiadczeniePieniezne> enumerator1 = tablicaOsob.GetEnumerator();
 
-            IEnumerator<IOsobaPieniezna> enumerator2 = tablicaOsobPoczatkowa.GetEnumerator();
+            IEnumerator<IOsobaSwiadczeniePieniezne> enumerator2 = tablicaOsobPoczatkowa.GetEnumerator();
 
             long sumaRoznic = 0;
 

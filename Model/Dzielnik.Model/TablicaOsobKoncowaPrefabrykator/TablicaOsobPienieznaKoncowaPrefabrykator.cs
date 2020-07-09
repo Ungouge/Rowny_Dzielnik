@@ -1,8 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
 
 using Dzielnik.Model.Interfejsy.TablicaOsobKoncowaPrefabrykator;
 using Dzielnik.Zasoby.Interfejsy.Fabryki;
-using Dzielnik.Zasoby.Interfejsy.Naleznosci;
 using Dzielnik.Zasoby.Interfejsy.Osoby;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
@@ -11,7 +10,7 @@ namespace Dzielnik.Model.TablicaOsobKoncowaPrefabrykator
     /// <summary>
     /// Prefabrykator tworzacego tablice osob jaka jest oczekiwana pod koniec wyrownywania naleznosci.
     /// </summary>
-    internal class TablicaOsobPienieznaKoncowaPrefabrykator: ITablicaOsobPienieznaKoncowaPrefabrykator
+    internal class TablicaOsobPienieznaKoncowaPrefabrykator : ITablicaOsobPienieznaKoncowaPrefabrykator
     {
         readonly IFabrykaTablicaOsobPienieznych fabrykaTablicaOsobPienieznych;
 
@@ -25,18 +24,16 @@ namespace Dzielnik.Model.TablicaOsobKoncowaPrefabrykator
             this.fabrykaNaleznosci = fabrykaNaleznosci;
         }
 
-        public ITablicaOsobPienieznych StworzTablicaKoncowa(ITablicaOsobPienieznychZwrotna tablicaOsob)
+        public ITablicaOsobPienieznych StworzTablicaKoncowa(ITablicaOsobPienieznych tablicaOsob)
         {
-            IEnumerator<IOsobaPieniezna> enumerator = (tablicaOsob as IEnumerable<IOsobaPieniezna>).GetEnumerator();
-
             long sumaNaleznosci = 0;
 
-            while (enumerator.MoveNext())
-                sumaNaleznosci += enumerator.Current.Wplata.Swiadczenie;
+            foreach (IOsobaSwiadczeniePieniezne osoba in tablicaOsob)
+                sumaNaleznosci += osoba.Wplata.Swiadczenie;
 
             byte naIleCzesci = tablicaOsob.WezIloscOsob;
 
-            INaleznoscPieniezna[] tablicaNaleznosci = new INaleznoscPieniezna[naIleCzesci];
+            IOsobaPieniezna[] szeragOsob = new IOsobaPieniezna[naIleCzesci];
 
             int swiadczenieKawalka = (int)(sumaNaleznosci / naIleCzesci);
 
@@ -45,17 +42,21 @@ namespace Dzielnik.Model.TablicaOsobKoncowaPrefabrykator
 
             byte iloscCoDostaneiWiecej = (byte)(sumaNaleznosci - (long)(swiadczenieKawalka * naIleCzesci));
 
-            int i = naIleCzesci - 1;
+            bool czyObniznoneFlaga = false;
 
-            for (; i >= iloscCoDostaneiWiecej; i--)
-                tablicaNaleznosci[i] = fabrykaNaleznosci.StworzNaleznosc(swiadczenieKawalka);
+            foreach (IOsobaPieniezna osoba in tablicaOsob.Reverse())
+            {
+                if (!czyObniznoneFlaga && iloscCoDostaneiWiecej++ >= naIleCzesci)
+                {
+                    swiadczenieKawalka++;
 
-            swiadczenieKawalka++;
+                    czyObniznoneFlaga = true;
+                }
 
-            for (; i >= 0; i--)
-                tablicaNaleznosci[i] = fabrykaNaleznosci.StworzNaleznosc(swiadczenieKawalka);
+                szeragOsob[osoba.ID] = osoba.ZmienWplate(fabrykaNaleznosci.StworzNaleznosc(swiadczenieKawalka));
+            }
 
-            return fabrykaTablicaOsobPienieznych.StworzTablicaOsob(tablicaNaleznosci);
+            return fabrykaTablicaOsobPienieznych.StworzTablicaOsob(szeragOsob);
         }
     }
 }

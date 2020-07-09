@@ -4,6 +4,7 @@ using Dzielnik.Model.Interfejsy.NajlepszaWymianaZnajdywacz;
 using Dzielnik.Model.Interfejsy.TablicaOsobKoncowaPrefabrykator;
 using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
+using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 
 namespace Dzielnik.Model.ObliczaczTabeliNaleznosci
 {
@@ -23,12 +24,13 @@ namespace Dzielnik.Model.ObliczaczTabeliNaleznosci
             this.tablicaOsobKoncowaPrefabrykator = tablicaOsobKoncowaPrefabrykator;
         }
 
-        public ITabelaNaleznosciPienieznejZwrotna ObliczNaleznosci(ITablicaOsobPienieznych tablicaOsob)
+        public ITabelaNaleznosciPienieznejZwrotna ObliczNaleznosci(ITablicaOsobPienieznych tablicaOsob,
+            KryteriumWyboruTabeliNaleznosciWylicznik kryteriumWyboruTabeliNaleznosci)
         {
             ITablicaOsobPienieznych koncowaTablicaOsob = tablicaOsobKoncowaPrefabrykator.StworzTablicaKoncowa(tablicaOsob);
 
             INajlepszaWymianaNalezosciPienieznejZnajdywacz znajdywacz =
-                fabryka.StworzNajlepszaWymianaNalezosciPienieznejZnajdywacz(koncowaTablicaOsob);
+                fabryka.StworzNajlepszaWymianaNalezosciPienieznejZnajdywacz(koncowaTablicaOsob, kryteriumWyboruTabeliNaleznosci);
 
             return znajdywacz.Znajdz(tablicaOsob);
         }

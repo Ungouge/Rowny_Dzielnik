@@ -1,5 +1,4 @@
-﻿using Dzielnik.Inicjalizator.Interfejsy;
-using Dzielnik.Model.Interfejsy.Fabryki;
+﻿using Dzielnik.Model.Interfejsy.Fabryki;
 using Dzielnik.Model.Interfejsy.ObliczaczTabeliNaleznosci;
 
 namespace Dzielnik.Model.ObliczaczTabeliNaleznosci
@@ -11,13 +10,9 @@ namespace Dzielnik.Model.ObliczaczTabeliNaleznosci
     {
         private IFabrykaDlaObliczaczTabeliNaleznosciProkurent fabryka;
 
-        private IUstawieniaRodzajNaleznosciWylicznik ustawienia;
-
-        public ObliczaczTabeliNaleznosciProkurent(IFabrykaDlaObliczaczTabeliNaleznosciProkurent fabryka, IUstawieniaRodzajNaleznosciWylicznik ustawienia)
+        public ObliczaczTabeliNaleznosciProkurent(IFabrykaDlaObliczaczTabeliNaleznosciProkurent fabryka)
         {
             this.fabryka = fabryka;
-
-            this.ustawienia = ustawienia;
         }
     }
 }

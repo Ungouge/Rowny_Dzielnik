@@ -15,7 +15,7 @@ namespace Dzielnik.Model.NajwiekszaMozliwaNaleznoscDoWymianyUstalacz
 
         private readonly INaleznoscPieniezna naleznoscPienieznaZerowa;
 
-        public NajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz(IFabrykaNaleznoscPienieznaZerowa fabrykaNaleznoscPienieznaZerowa,
+        internal NajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz(IFabrykaNaleznoscPienieznaZerowa fabrykaNaleznoscPienieznaZerowa,
             ITablicaOsobPienieznychZwrotna koncowaTablicaOsob)
         {
             this.koncowaTablicaOsob = koncowaTablicaOsob;
@@ -26,10 +26,10 @@ namespace Dzielnik.Model.NajwiekszaMozliwaNaleznoscDoWymianyUstalacz
         public INaleznoscPieniezna UstalNaleznoscDoWymiany(ITablicaOsobPienieznychZwrotna tablicaOsob, IOsobaID osobaKorzen, IOsobaID osobaPotomek)
         {
             INaleznoscPieniezna roznicaNaleznosciKorzenia =
-                tablicaOsob[osobaKorzen.ID].Wplata.Roznica(koncowaTablicaOsob[osobaKorzen.ID].Wplata);
+                tablicaOsob[osobaKorzen].Wplata.Roznica(koncowaTablicaOsob[osobaKorzen].Wplata);
 
             INaleznoscPieniezna roznicaNaleznosciPotomka =
-                koncowaTablicaOsob[osobaPotomek.ID].Wplata.Roznica(tablicaOsob[osobaPotomek.ID].Wplata);
+                koncowaTablicaOsob[osobaPotomek].Wplata.Roznica(tablicaOsob[osobaPotomek].Wplata);
 
             if (naleznoscPienieznaZerowa.CzyWieksze(roznicaNaleznosciPotomka))
                 if (naleznoscPienieznaZerowa.CzyWieksze(roznicaNaleznosciKorzenia))

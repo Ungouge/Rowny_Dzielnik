@@ -4,18 +4,16 @@ namespace Dzielnik.Model.ObliczaczTabeliNaleznosci
 {
     partial class ObliczaczTabeliNaleznosciProkurent
     {
-        private ITabelaNaleznosciObliczacz obliczaczTabeliNaleznosci = null;
+        private ITabelaNaleznosciPienieznychObliczacz obliczaczTabeliNaleznosciPienieznych = null;
 
-        private ITabelaNaleznosciPienieznychObliczacz WezObliczaczTabeliNaleznosciPienieznych
+        private ITabelaNaleznosciPienieznychObliczacz ObliczaczTabeliNaleznosciPienieznych
         {
             get
             {
-                if (obliczaczTabeliNaleznosci is ITabelaNaleznosciPienieznychObliczacz ObliczaczTabeliNaleznosciPienieznych)
-                    return ObliczaczTabeliNaleznosciPienieznych;
+                if (obliczaczTabeliNaleznosciPienieznych == null)
+                    obliczaczTabeliNaleznosciPienieznych = fabryka.StworzObliczaczTabeliNaleznosciPienieznych();
 
-                obliczaczTabeliNaleznosci = fabryka.StworzObliczaczTabeliNaleznosciPienieznych();
-
-                return obliczaczTabeliNaleznosci as ITabelaNaleznosciPienieznychObliczacz;
+                return obliczaczTabeliNaleznosciPienieznych;
             }
         }
     }

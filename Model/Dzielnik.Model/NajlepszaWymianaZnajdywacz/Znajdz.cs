@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-using Dzielnik.Model.Interfejsy.TabeleNaleznosci;
+﻿using Dzielnik.Model.Interfejsy.TabeleNaleznosci;
 using Dzielnik.Zasoby.Interfejsy.Naleznosci;
 using Dzielnik.Zasoby.Interfejsy.Osoby;
 using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
@@ -19,9 +17,9 @@ namespace Dzielnik.Model.NajlepszaWymianaZnajdywacz
         {
             ITabelaNaleznosciPienieznej najlepszaTabelaNaleznosci = fabryka.StworzTabelaNaleznosciPienieznejNull();
 
-            foreach (IOsobaPieniezna osobaKorzen in (tablicaOsob as IEnumerable<IOsobaPieniezna>))
+            foreach (IOsobaSwiadczeniePieniezne osobaKorzen in tablicaOsob)
             {
-                foreach (IOsobaPieniezna osobaPotomek in tablicaOsob)
+                foreach (IOsobaSwiadczeniePieniezne osobaPotomek in tablicaOsob)
                 {
                     INaleznoscPieniezna roznicaNaleznosci = najwiekszaMozliwaNaleznoscDoWymianyUstalacz.UstalNaleznoscDoWymiany(tablicaOsob, osobaKorzen, osobaPotomek);
 

@@ -1,29 +1,21 @@
-﻿using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
+﻿using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
+using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 using Dzielnik.Zasoby.Wyjatki;
-using Dzielnik.Zasoby.Wyliczniki;
 
 namespace Dzielnik.Model.ObliczaczTabeliNaleznosci
 {
     partial class ObliczaczTabeliNaleznosciProkurent
     {
-        public ITabelaNaleznosciZwrotna ObliczNaleznosci(ITablicaOsob tablicaOsob)
+        public ITabelaNaleznosciZwrotna ObliczNaleznosci(ITablicaOsobBaza tablicaOsob, KryteriumWyboruTabeliNaleznosciWylicznik kryteriumWyboruTabeliNaleznosci)
         {
-            switch (RodzajNaleznosci)
+            switch (tablicaOsob)        
             {
-                case RodzajNaleznosciWylicznik.NaleznoscPieniezna:
-                    return WezObliczaczTabeliNaleznosciPienieznych.ObliczNaleznosci(tablicaOsob as ITablicaOsobPienieznych);
-                default:
-                    throw new ZlyTypNaleznosciWyjatek(this, RodzajNaleznosci);
+                case ITablicaOsobPienieznych tablicaOsobPienieznych:
+                    return ObliczaczTabeliNaleznosciPienieznych.ObliczNaleznosci(tablicaOsobPienieznych, kryteriumWyboruTabeliNaleznosci);
             }
-        }
-
-        private RodzajNaleznosciWylicznik RodzajNaleznosci
-        {
-            get
-            {
-                return ustawienia.RodzajNaleznosciWylicznik;
-            }
+            
+            throw new ZlyTypNaleznosciWyjatek(this, tablicaOsob.GetType());
         }
     }
 }

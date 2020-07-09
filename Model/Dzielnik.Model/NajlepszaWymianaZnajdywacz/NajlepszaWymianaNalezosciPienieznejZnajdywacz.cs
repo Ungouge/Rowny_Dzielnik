@@ -2,7 +2,6 @@
 using Dzielnik.Model.Interfejsy.Fabryki;
 using Dzielnik.Model.Interfejsy.NajlepszaWymianaZnajdywacz;
 using Dzielnik.Model.Interfejsy.NajwiekszaMozliwaNaleznoscDoWymianyUstalacz;
-using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
 namespace Dzielnik.Model.NajlepszaWymianaZnajdywacz
 {
@@ -11,13 +10,13 @@ namespace Dzielnik.Model.NajlepszaWymianaZnajdywacz
     /// </summary>
     internal partial class NajlepszaWymianaNalezosciPienieznejZnajdywacz : INajlepszaWymianaNalezosciPienieznejZnajdywacz
     {
-        private readonly IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz fabryka;
+        private readonly IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada fabryka;
 
         private readonly INajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz najwiekszaMozliwaNaleznoscDoWymianyUstalacz;
 
         private readonly IRozniceDoStanuKwitaNaleznosciPienieznychSumator rozniceDoStanuKwitaSumator;
 
-        internal NajlepszaWymianaNalezosciPienieznejZnajdywacz(IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz fabryka,
+        internal NajlepszaWymianaNalezosciPienieznejZnajdywacz(IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada fabryka,
             INajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz najwiekszaMozliwaNaleznoscDoWymianyUstalacz,
             IRozniceDoStanuKwitaNaleznosciPienieznychSumator rozniceDoStanuKwitaSumator)
         {
