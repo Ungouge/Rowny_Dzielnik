@@ -9,7 +9,14 @@ namespace Dzielnik.Zasoby.TablicaOsob
         {
             get
             {
-                return osoby[osobaID.ID];
+                if (osobaID.ID == osoby[osobaID.ID].ID)
+                    return osoby[osobaID.ID];
+
+                foreach (IOsobaPieniezna osoba in osoby)
+                    if (osoba.ID == osobaID.ID)
+                        return osoba;
+
+                return null;
             }
         }
     }
