@@ -57,6 +57,15 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'modelWidoku %28testy i debug%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\modelWidoku %28testy i debug%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -68,7 +77,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IInicjaliztorDlaFabrykaModelu.cs" />
+    <Compile Include="Inicjalizator\IInicjaliztorDlaFabrykaModelu.cs" />
+    <Compile Include="Inicjalizator\IInicjaliztorDlaModelu.cs" />
     <Compile Include="ModelDzielnika\IModelDzielnika.cs" />
     <Compile Include="ModelDzielnika\IModelDzielnikaDlaModelWidoku.cs" />
     <Compile Include="ModelDzielnika\IModelDzielnikaDlaUaktualniaczModelu.cs" />
