@@ -1,4 +1,6 @@
-﻿using Dzielnik.Zasoby.Zdarzenia;
+﻿using System;
+
+using Dzielnik.Zasoby.Zdarzenia;
 
 namespace Dzielnik.Model.Interfejsy
 {
@@ -7,6 +9,9 @@ namespace Dzielnik.Model.Interfejsy
     /// </summary>
     public interface IModelDzielnikaDlaModelWidoku
     {
-        event ObliczonaTabelaNaleznosci_ObslugaZdarzenia ObliczonaTabelNaleznocsci;
+        /// <summary>
+        /// Obsluga zdarzenia na obliczenie tabeli naleznosci prze model.
+        /// </summary>
+        event EventHandler<ObliczonaTabelaNaleznosci_ArgumentZdarzenia> ObliczonaTabelNaleznocsci;
     }
 }

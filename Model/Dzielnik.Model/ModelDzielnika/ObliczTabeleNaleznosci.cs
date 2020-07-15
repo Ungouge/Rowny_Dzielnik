@@ -1,4 +1,5 @@
 ﻿using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
+using Dzielnik.Zasoby.Zdarzenia;
 
 namespace Dzielnik.Model
 {
@@ -28,7 +29,7 @@ namespace Dzielnik.Model
 
         private void NaObliczenieTabeliNaleznosci()
         {
-            ObliczonaTabelNaleznocsci?.Invoke(this, tabelaNaleznosci);
+            ObliczonaTabelNaleznocsci?.Invoke(this, new ObliczonaTabelaNaleznosci_ArgumentZdarzenia( tabelaNaleznosci));
         }
     }
 }
