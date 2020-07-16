@@ -76,6 +76,7 @@
     <Compile Include="KryteriumWyboru\Stworz_KryteriumSumyWymienionejNaleznosciPienieznej_Mock.cs" />
     <Compile Include="Naleznosci\Stworz_NaleznoscPieniezna_Mock\Stworz_Naleznosc_Mock.cs" />
     <Compile Include="Naleznosci\Stworz_NaleznoscPieniezna_Mock\Stworz_Naleznosc_Swiadczenie_Mock.cs" />
+    <Compile Include="Naleznosci\Stworz_NaleznoscSwiadczenieBaza_Mock.cs" />
     <Compile Include="Osoby\osobaID\Stworz_OsobaID_Moq.cs" />
     <Compile Include="Osoby\OsobaPieniezna\Stworz_OsobaPieniezna_Mock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
