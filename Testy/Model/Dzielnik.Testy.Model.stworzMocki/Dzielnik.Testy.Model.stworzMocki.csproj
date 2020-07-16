@@ -88,9 +88,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fabryki\Stworz_FabrykaModelu_Mock.cs" />
+    <Compile Include="Model\Stworz_Model_Mock.cs" />
     <Compile Include="NajlepszaWymianaZnajdywacz\Stworz_IFabrykaDlaNajlepszaTabelaNaleznosciPienieznejZnajdywacz_Mock.cs" />
     <Compile Include="NajlepszaWymianaZnajdywacz\Stworz_NajlepszaWymianaNalezosciPienieznejZnajdywacz_Mock.cs" />
-    <Compile Include="NajlepszaWymianaZnajdywacz\Stworz_NajlepszaWymianaNalezosciPienieznejZnajdywacz.cs" />
     <Compile Include="NajwiekszaMozliwaNaleznoscDoWymianyUstalacz\Stworz_FabrykaNaleznoscPienieznaZerow_Mock.cs" />
     <Compile Include="NajwiekszaMozliwaNaleznoscDoWymianyUstalacz\Stworz_NajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz.cs" />
     <Compile Include="ObliczaczTabeliNaleznosci\Stworz_FabrykaDlaObliczaczTabeliNaleznosciProkurent_Mock.cs" />
@@ -130,10 +131,6 @@
     <ProjectReference Include="..\..\Zasoby\Dzielnik.Testy.Zasoby.stworz\Dzielnik.Testy.Zasoby.stworz.csproj">
       <Project>{FBABEEB5-9AA6-4FBF-9D00-E7698141AEAC}</Project>
       <Name>Dzielnik.Testy.Zasoby.stworz</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Dzielnik.Testy.Model.stworz\Dzielnik.Testy.Model.stworz.csproj">
-      <Project>{43b6c712-0d1e-4e4c-a764-676f6a3cc385}</Project>
-      <Name>Dzielnik.Testy.Model.stworz</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
