@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoStanuKwitaSumator\Stworz_RozniceDoStanuKwitaNaleznosciPienieznychSumator.cs" />
+    <Compile Include="ModelDzielnika\Stworz_ModelDzielnika.cs" />
+    <Compile Include="NajlepszaWymianaZnajdywacz\Stworz_NajlepszaWymianaNalezosciPienieznejZnajdywacz.cs" />
     <Compile Include="ObliczaczTabeliNaleznosci\Stworz_ObliczaczTabeliNaleznosciProkurent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\DeklaracjaPrzyjazniTestow.cs" />
@@ -91,6 +93,10 @@
     <ProjectReference Include="..\..\Zasoby\Dzielnik.Testy.Zasoby.stworz\Dzielnik.Testy.Zasoby.stworz.csproj">
       <Project>{FBABEEB5-9AA6-4FBF-9D00-E7698141AEAC}</Project>
       <Name>Dzielnik.Testy.Zasoby.stworz</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Dzielnik.Testy.Model.stworzMocki\Dzielnik.Testy.Model.stworzMocki.csproj">
+      <Project>{850e61c4-6f6b-475e-b11f-14f3d7ef2984}</Project>
+      <Name>Dzielnik.Testy.Model.stworzMocki</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,16 +1,18 @@
 ﻿using Dzielnik.Model.Interfejsy.Fabryki;
+using Dzielnik.Model.Interfejsy.TabeleNaleznosci;
 using Dzielnik.Testy.Model.TabeleNaleznosci;
 using Dzielnik.Testy.Zasoby.TabelaNaleznosci;
 using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 
 using Moq;
-
+using System;
 
 namespace Dzielnik.Testy.Model.NajlepszaWymianaZnajdywacz
 {
     public static class Stworz_IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz_Mock
     {
-        internal static IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada Stworz(byte iloscOsob, KryteriumWyboruTabeliNaleznosciWylicznik kryteriumWyboruTabeliNaleznosci)
+        internal static IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada Stworz(Func<ITabelaNaleznosciPienieznej> stworzPustyTabelaNaleznosciPienieznej, 
+            Func<ITabelaNaleznosciPienieznej> stworzTabelaNaleznosciPienieznejNull)
         {
             Mock<IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada> fabryka_Mock =
                 new Mock<IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada>
@@ -23,7 +25,7 @@ namespace Dzielnik.Testy.Model.NajlepszaWymianaZnajdywacz
                 fabryka => fabryka.StworzStartowaTabelaNaleznosciPienieznej()
             ).Returns
             (
-                () => Stworz_TabelaNaleznosciPienieznej.Stworz_Pusty(iloscOsob, kryteriumWyboruTabeliNaleznosci)
+                () => stworzPustyTabelaNaleznosciPienieznej()
             );
 
             fabryka_Mock.Setup
@@ -31,7 +33,7 @@ namespace Dzielnik.Testy.Model.NajlepszaWymianaZnajdywacz
                 fabryka => fabryka.StworzTabelaNaleznosciPienieznejNull()
             ).Returns
             (
-                () => Stworz_TabelaNaleznosciPienieznejNull.Stworz(iloscOsob)
+                () => stworzTabelaNaleznosciPienieznejNull()
             );
 
             fabryka_Mock.Setup

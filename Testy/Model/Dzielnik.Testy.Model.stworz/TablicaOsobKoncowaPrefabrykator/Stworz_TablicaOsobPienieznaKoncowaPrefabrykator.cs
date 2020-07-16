@@ -1,5 +1,4 @@
-﻿
-using Dzielnik.Model.Interfejsy.TablicaOsobKoncowaPrefabrykator;
+﻿using Dzielnik.Model.Interfejsy.TablicaOsobKoncowaPrefabrykator;
 using Dzielnik.Model.TablicaOsobKoncowaPrefabrykator;
 using Dzielnik.Zasoby.Fabryki;
 using Dzielnik.Zasoby.Interfejsy.Fabryki;
