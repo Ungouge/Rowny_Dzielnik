@@ -11,10 +11,15 @@ namespace Dzielnik.Testy.Model.TabeleNaleznosci
 {
     public static class Stworz_TabelaNaleznosciPienieznej_Mock
     {
+        internal static ITabelaNaleznosciPienieznej Stworz_Mock()
+        {
+            return Stworz_MockWlasciwy().Object;
+        }
+
         internal static ITabelaNaleznosciPienieznej 
             Stworz_TabelaNaleznosciPienieznej_KryteriumWyboruTabeliNaleznosci_WezWymienionaNaleznosc_Mock(int wymienionaNaleznosc)
         {
-            Mock<ITabelaNaleznosciPienieznej> tabelaNaleznosciPienieznej_Mock = new Mock<ITabelaNaleznosciPienieznej>();
+            Mock<ITabelaNaleznosciPienieznej> tabelaNaleznosciPienieznej_Mock = Stworz_MockWlasciwy();
 
             IKryteriumSumyWymienionejNaleznosciPienieznej kryteriuWyboru =
                 Stworz_KryteriumSumyWymienionejNaleznosciPienieznej_Mock.Stworz_Kryterium_Naleznosc_Polgrsze_Mock(wymienionaNaleznosc);
@@ -29,7 +34,7 @@ namespace Dzielnik.Testy.Model.TabeleNaleznosci
         internal static ITabelaNaleznosciPienieznej Stworz_TabelaNaleznosciPienieznej_ZwrocLepszeKryterium_ZwracajPodanyJezeliPrzeslanyPodany_Mock(
             ITabelaNaleznosciPienieznej tabelaNaleznosciDoZrocenia)
         {
-            Mock<ITabelaNaleznosciPienieznej> tabelaNaleznosciPienieznej_Mock = new Mock<ITabelaNaleznosciPienieznej>();
+            Mock<ITabelaNaleznosciPienieznej> tabelaNaleznosciPienieznej_Mock = Stworz_MockWlasciwy();
 
             tabelaNaleznosciPienieznej_Mock.Setup
             (
@@ -47,8 +52,13 @@ namespace Dzielnik.Testy.Model.TabeleNaleznosci
             (
                 new Exception("Nie powinno zwrocic tej tabeli \"Dzielnik.Testy.Zasoby.TabeleNaleznosci.Stworz_TabelaNaleznosciPienieznej_Mock.Stworz_TabelaNaleznosciPienieznej_KryteriumWyboruTabeliNaleznosci_WezWymienionaNaleznosc_Mock(int wymienionaNaleznosc)\"")
             );
-            
+
             return tabelaNaleznosciPienieznej_Mock.Object;
+        }
+
+        private static Mock<ITabelaNaleznosciPienieznej> Stworz_MockWlasciwy()
+        {
+            return new Mock<ITabelaNaleznosciPienieznej>();
         }
     }
 }

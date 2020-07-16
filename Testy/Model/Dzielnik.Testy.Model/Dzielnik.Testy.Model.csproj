@@ -91,6 +91,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DoStanuKwitaSumator\Czy_RozniceDoStanuKwitaNaleznosciPienieznychSumator_SumujRoznice.cs" />
+    <Compile Include="ModelDzielnika\Czy_ModelDzielnika_ObliczonaTabelNaleznocsci.cs" />
+    <Compile Include="ModelDzielnika\Czy_ModelDzielnika_Uaktualnij.cs" />
     <Compile Include="NajlepszaWymianaZnajdywacz\Czy_NajlepszaWymianaNalezosciPienieznejZnajdywacz_Znajdz.cs" />
     <Compile Include="NajlepszaWymianaZnajdywacz\KomuniatOBledzieKonstruktor.cs" />
     <Compile Include="NajwiekszaMozliwaNaleznoscDoWymianyUstalacz\Czy_NajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz_UstalNaleznoscDoWymiany.cs" />
