@@ -78,10 +78,10 @@
     <Compile Include="Komendy\Czy_ObliczKomenda_Execute.cs" />
     <Compile Include="Konwertery\KomorkaNaOsoba\komorkaNaOsobaPieniezna\Czy_KomorkaNaOsobaPienieznaWizytor_CzyOdpowiadaRodzajowiNaleznosci.cs" />
     <Compile Include="Konwertery\KomorkaNaOsoba\komorkaNaOsobaPieniezna\Czy_KomorkaNaOsobaPienieznaWizytor_StworzOsoba.cs" />
-    <Compile Include="Konwertery\NaleznoscNaString\Czy_NaleznoscNaStringProkurent_NaString.cs" />
+    <Compile Include="Konwertery\NaleznoscNaString\Czy_KonwerterNaleznoscNaStringProkurent_NaString.cs" />
     <Compile Include="Konwertery\NaleznoscNaString\Czy_NaleznoscPienieznaNaStringKonwerter_NaStringOdwrotnosc.cs" />
     <Compile Include="Konwertery\NaleznoscNaString\Czy_NaleznoscPienieznaNaStringKonwerter_NaString.cs" />
-    <Compile Include="Konwertery\NaleznoscNaString\Czy_NaleznoscNaStringProkurent_NaStringOdwrotnosc.cs" />
+    <Compile Include="Konwertery\NaleznoscNaString\Czy_KonwerterNaleznoscNaStringProkurent_NaStringOdwrotnosc.cs" />
     <Compile Include="Konwertery\NaleznoscNaString\KomunikatOBledzie.cs" />
     <Compile Include="Konwertery\TekstKwotyWejsciowej\Czy_KonwerterTekstKwotyWejsciowejProkurent_Konwertuj.cs" />
     <Compile Include="Konwertery\TekstKwotyWejsciowej\Czy_TekstKwotyWejsciowejNaleznosciPienieznejKonwerter_Konwertuj.cs" />
