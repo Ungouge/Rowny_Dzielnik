@@ -2,7 +2,7 @@
 
 using Moq;
 
-namespace Dzielnik.Testy.ModelWidoku.Komorka
+namespace Dzielnik.Testy.ModelWidoku.Komorki
 {
     public static class Stworz_KomorkaWejsciowaKwoty_Mock
     {

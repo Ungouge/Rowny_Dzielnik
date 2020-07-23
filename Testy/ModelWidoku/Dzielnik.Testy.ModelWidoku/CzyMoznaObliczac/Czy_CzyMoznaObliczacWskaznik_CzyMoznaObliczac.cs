@@ -3,7 +3,7 @@
 using Dzielnik.ModelWidoku.Interfejsy.CzyMoznaObliczac;
 using Dzielnik.ModelWidoku.Interfejsy.Komorki;
 using Dzielnik.ModelWidoku.Zdarzenia;
-using Dzielnik.Testy.ModelWidoku.Komorka;
+using Dzielnik.Testy.ModelWidoku.Komorki;
 using Dzielnik.Testy.ModelWidoku.Pomocnicze;
 
 using Moq;
