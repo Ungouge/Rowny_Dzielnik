@@ -37,6 +37,7 @@
     <Reference Include="Moq, Version=4.14.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <HintPath>..\packages\Moq.4.14.4\lib\net45\Moq.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -52,12 +53,35 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CzyMoznaObliczac\Stowrz_CzyMoznaObliczacWkaznikPobierz_Mock.cs" />
+    <Compile Include="Fabryki\KomorkaZOsoba_ObslugaListy.cs" />
+    <Compile Include="Fabryki\Stworz_FabrykaModeluWidokuDlaTabelaKomorek_Mock.cs" />
     <Compile Include="Komendy\Stworz_ObliczKomendaAkcja_WeryfikalnyMock.cs" />
+    <Compile Include="Komorki\adaptowalne\Stworz_KomorkaDolnotrojkatnaKwotyNaleznej_Mock.cs" />
+    <Compile Include="Komorki\adaptowalne\Stworz_KomorkaGornotrojkatnaKwotyNaleznej_Mock.cs" />
+    <Compile Include="Komorki\adaptowalne\Stworz_KomorkaWyjsciowaImienia_Mock.cs" />
+    <Compile Include="Komorki\adaptowalne\Stworz_KomorkaWejsciowaImienia_Mock.cs" />
+    <Compile Include="Komorki\adaptowalne\Stworz_KomorkaWejsciowaKwoty_Mock.cs" />
+    <Compile Include="Komorki\adaptowalne\Stworz_KomorkaDiagonalna_Mock.cs" />
+    <Compile Include="Komorki\adaptowalne\UstawieaniaAtrapZTekstemWyrazenia.cs" />
+    <Compile Include="Komorki\adaptowalne\UstawieaniaAtrapZTlemTekstuWyrazenia.cs" />
+    <Compile Include="Komorki\Stowrz_KomorkaListyRodzajuNaleznosci_Mock.cs" />
+    <Compile Include="Komorki\Stworz_KomorkaDiagonalna_Mock.cs" />
+    <Compile Include="Komorki\Stworz_KomorkaDolnotrojkatnaKwotyNaleznej_Mock.cs" />
+    <Compile Include="Komorki\Stworz_KomorkaGornotrojkatnaKwotyNaleznej_Mock.cs" />
+    <Compile Include="Komorki\Stworz_KomorkaImieniaINaleznosciWejscowej_Mock.cs" />
+    <Compile Include="Komorki\Stworz_KomorkaKwotyNaleznej_Mock.cs" />
+    <Compile Include="Komorki\Stworz_KomorkaListyKryteriumWyboru_Mock.cs" />
+    <Compile Include="Komorki\Stworz_KomorkaWejsciowaImienia_Mock.cs" />
     <Compile Include="Komorki\Stworz_KomorkaWejsciowaKwoty_Mock.cs" />
+    <Compile Include="Komorki\Stworz_KomorkaWyjsciowaImienia_Mock.cs" />
+    <Compile Include="Konwertery\KomorkaNaOsoba\Stworz_KonwerterKomorkaNaOsobaWizytator_Mock.cs" />
+    <Compile Include="Konwertery\NaleznoscNaString\Stworz_KonwerterNaleznoscNaStringProkurent_Mock.cs" />
     <Compile Include="Konwertery\NaleznoscNaString\Stworz_NaleznoscNaStringKonwerter_Mock.cs" />
+    <Compile Include="Konwertery\TekstKwotyWejsciowej\Stworz_KonwerterTekstKwotyWejsciowejProkurentDlaKomorka_Mock.cs" />
     <Compile Include="Konwertery\TekstKwotyWejsciowej\Stworz_TekstKwotyWejsciowejKonwerter_Mock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\DeklaracjaPrzyjazniTestow.cs" />
@@ -76,12 +100,18 @@
       <Project>{58DEF0CD-E430-47B5-8A60-6961A17D1541}</Project>
       <Name>Dzielnik.Zasoby.Interfejsy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Model\Dzielnik.Testy.Model.stworzMocki\Dzielnik.Testy.Model.stworzMocki.csproj">
+      <Project>{850E61C4-6F6B-475E-B11F-14F3D7EF2984}</Project>
+      <Name>Dzielnik.Testy.Model.stworzMocki</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Zasoby\Dzielnik.Testy.Zasoby.stworzMocki\Dzielnik.Testy.Zasoby.stworzMocki.csproj">
+      <Project>{4AAA5A6C-644D-41FE-A644-324A367641D2}</Project>
+      <Name>Dzielnik.Testy.Zasoby.stworzMocki</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="NewFolder1\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

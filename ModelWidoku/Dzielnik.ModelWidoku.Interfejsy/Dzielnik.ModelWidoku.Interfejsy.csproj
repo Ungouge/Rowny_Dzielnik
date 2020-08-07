@@ -88,8 +88,8 @@
     <Compile Include="Komorki\pomocnicze i bazowe\IKomorkaListy.cs" />
     <Compile Include="Komorki\pomocnicze i bazowe\IKomorkaZKolorowymTlem.cs" />
     <Compile Include="Komorki\pomocnicze i bazowe\IKomorkaImienia.cs" />
+    <Compile Include="Komorki\pomocnicze i bazowe\IKomorkaZKolorowymTlemTekstu.cs" />
     <Compile Include="Komorki\pomocnicze i bazowe\IKomorkaZmienna.cs" />
-    <Compile Include="Komorki\tabelaKomorek\IKomorkaNaOsobaWizytor.cs" />
     <Compile Include="modelWidokuDzielnika\IModelWidokuDzielnika.cs" />
     <Compile Include="Komendy\IObliczKomenda.cs" />
     <Compile Include="Komorki\pomocnicze i bazowe\IKomorka.cs" />

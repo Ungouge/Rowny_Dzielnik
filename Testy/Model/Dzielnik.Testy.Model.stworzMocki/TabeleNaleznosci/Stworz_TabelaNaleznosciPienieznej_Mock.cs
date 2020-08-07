@@ -2,6 +2,7 @@
 
 using Dzielnik.Model.Interfejsy.TabeleNaleznosci;
 using Dzielnik.Testy.Zasoby.KryteriumWyboru;
+using Dzielnik.Testy.Zasoby.Naleznosci;
 using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
 
@@ -50,7 +51,7 @@ namespace Dzielnik.Testy.Model.TabeleNaleznosci
                 tabela => tabela[It.IsAny<IPolozenieWTabeliNaleznosci>()]
             ).Throws
             (
-                new Exception("Nie powinno zwrocic tej tabeli \"Dzielnik.Testy.Zasoby.TabeleNaleznosci.Stworz_TabelaNaleznosciPienieznej_Mock.Stworz_TabelaNaleznosciPienieznej_KryteriumWyboruTabeliNaleznosci_WezWymienionaNaleznosc_Mock(int wymienionaNaleznosc)\"")
+                new Exception("Nie powinno zwrocic tej tabeli \"" + typeof(Stworz_TabelaNaleznosciPienieznej_Mock).ToString() + "\"")
             );
 
             return tabelaNaleznosciPienieznej_Mock.Object;

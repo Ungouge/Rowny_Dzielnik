@@ -57,6 +57,15 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'modelWidoku %28testy i debug%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\modelWidoku %28testy i debug%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -68,9 +77,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IInicjalizatorFabrykaNaleznosci.cs" />
-    <Compile Include="IInicjalizatorFabrykaTablicaOsob.cs" />
+    <Compile Include="Inicjalizator\IInicjalizatorFabrykaNaleznosci.cs" />
+    <Compile Include="Inicjalizator\IInicjalizatorFabrykaOsob.cs" />
+    <Compile Include="Inicjalizator\IInicjalizatorFabrykaTablicaOsob.cs" />
     <Compile Include="Ustawienia\IUstawienia.cs" />
+    <Compile Include="Ustawienia\IUstawieniaDlaTabelaKomorek.cs" />
     <Compile Include="Ustawienia\IUstawieniaRodzajNaleznosciWylicznik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

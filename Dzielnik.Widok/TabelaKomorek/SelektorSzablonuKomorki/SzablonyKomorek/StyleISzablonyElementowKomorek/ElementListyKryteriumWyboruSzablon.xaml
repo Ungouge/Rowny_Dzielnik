@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Konwertery="clr-namespace:Dzielnik.Widok.Konwertery">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="TesktBlokListyStyl.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate x:Key="ElementListyKryteriumWyboruSzablon">
+        
+        <DataTemplate.Resources>
+            <Konwertery:KryteriumWyboruNaStringKonwerter x:Key="KryteriumWyboruNaStringKonwerter"/>
+        </DataTemplate.Resources>
+
+        <TextBlock Text="{Binding Converter={StaticResource KryteriumWyboruNaStringKonwerter}}"
+                   Style="{StaticResource TekstBlokListyStyl}"/>
+        
+    </DataTemplate>
+
+</ResourceDictionary>

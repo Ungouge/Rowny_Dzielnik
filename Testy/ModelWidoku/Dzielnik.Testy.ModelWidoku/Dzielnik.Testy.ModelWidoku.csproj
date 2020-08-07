@@ -42,6 +42,7 @@
     <Reference Include="Moq, Version=4.14.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\Moq.4.14.4\lib\net45\Moq.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -57,6 +58,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
     <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
     </Reference>
@@ -76,6 +78,31 @@
     <Compile Include="Komendy\Czy_ObliczKomenda_CanExecute.cs" />
     <Compile Include="Komendy\Czy_ObliczKomenda_CanExecute_ZmianaWartosci.cs" />
     <Compile Include="Komendy\Czy_ObliczKomenda_Execute.cs" />
+    <Compile Include="Komorki\Adaptery\Czy_KomorkaDiagonalnaAdapter.cs" />
+    <Compile Include="Komorki\Adaptery\Czy_KomorkaGornotrojkatnaKwotyNaleznejAdapter.cs" />
+    <Compile Include="Komorki\Adaptery\Czy_KomorkaWejsciowaImieniaAdapter.cs" />
+    <Compile Include="Komorki\Adaptery\Czy_KomorkaWejsciowaKwotyAdapter.cs" />
+    <Compile Include="Komorki\Adaptery\Czy_KomorkaWyjsciowaImieniaAdapter.cs" />
+    <Compile Include="Komorki\Adaptery\Czy_KomorkaDolnotrojkatnaKwotyNaleznejAdapter.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaImieniaINaleznosciWejscowej\diagonalna\Czy_KomorkaDiagonalna_Adaptowalna.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaImieniaINaleznosciWejscowej\komorkaImienia\Czy_KomorkaImienia_Adaptowalna.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaImieniaINaleznosciWejscowej\komorkaWejsciowa\Czy_KomorkaZWejsciemTekstu_Adaptowalna.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaImieniaINaleznosciWejscowej\kwotyWejsciowej\Czy_KolorTlaPoKonwersji.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaImieniaINaleznosciWejscowej\kwotyWejsciowej\Czy_KomorkaWejsciowaKwoty_Adaptowalna.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaImieniaINaleznosciWejscowej\osobaWejsciowa\Czy_KomorkaOsobyWejsciowej_Adaptowalna.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaImieniaINaleznosciWejscowej\kwotyWejsciowej\Czy_Tekst_Uaktualnia_Akcje.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaImieniaINaleznosciWejscowej\wejsciowaImienia\Czy_KomorkaWejsciowaImienia_Adaptowalna.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaImieniaINaleznosciWejscowej\wejsciowaImienia\Czy_Tekst.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaImieniaINaleznosciWejscowej\wyjsciowaImienia\Czy_KomorkaWyjsciowaImienia_Adaptowalna.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaKwotyNaleznej\komorkaDolnotrojkatnaKwotyNaleznej\Czy_KomorkaDolnotrojkatnaKwotyNaleznej_Adaptowalna.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaKwotyNaleznej\Czy_KomorkaKwotyNaleznej_UstalNaleznosc.cs" />
+    <Compile Include="Komorki\Adaptowalne\komorkaKwotyNaleznej\komorkaGornotrojkatnaKwotyNaleznej\Czy_KomorkaGornotrojkatnaKwotyNaleznej_Adaptowalna.cs" />
+    <Compile Include="Komorki\AsertujKomorka.cs" />
+    <Compile Include="Komorki\TabelaKomorek\Czy_TabelaKomorek.cs" />
+    <Compile Include="Komorki\TabelaKomorek\Czy_TabelaKomorek_GetEnumerator.cs" />
+    <Compile Include="Komorki\TabelaKomorek\Czy_TabelaKomorek_IterujOsobyKomorekKwotyWejsciowej.cs" />
+    <Compile Include="Komorki\TabelaKomorek\Czy_TabelaKomorek_UaktualnijTabelaNaleznocsci.cs" />
+    <Compile Include="Komorki\TabelaKomorek\KomorkiOdlicznik.cs" />
     <Compile Include="Konwertery\KomorkaNaOsoba\komorkaNaOsobaPieniezna\Czy_KomorkaNaOsobaPienieznaWizytor_CzyOdpowiadaRodzajowiNaleznosci.cs" />
     <Compile Include="Konwertery\KomorkaNaOsoba\komorkaNaOsobaPieniezna\Czy_KomorkaNaOsobaPienieznaWizytor_StworzOsoba.cs" />
     <Compile Include="Konwertery\NaleznoscNaString\Czy_KonwerterNaleznoscNaStringProkurent_NaString.cs" />
@@ -96,6 +123,10 @@
     <Analyzer Include="..\..\..\packages\xunit.analyzers.0.10.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Inicjalizator\Dzielnik.Inicjalizator.Interfejsy\Dzielnik.Inicjalizator.Interfejsy.csproj">
+      <Project>{121003ca-351d-49d2-83df-23cb8497ed5f}</Project>
+      <Name>Dzielnik.Inicjalizator.Interfejsy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\ModelWidoku\Dzielnik.ModelWidoku.Interfejsy\Dzielnik.ModelWidoku.Interfejsy.csproj">
       <Project>{cfa82b7f-e015-487a-bcc9-4d618a7719c5}</Project>
       <Name>Dzielnik.ModelWidoku.Interfejsy</Name>
@@ -111,6 +142,10 @@
     <ProjectReference Include="..\..\..\Zasoby\Dzielnik.Zasoby.Interfejsy\Dzielnik.Zasoby.Interfejsy.csproj">
       <Project>{58def0cd-e430-47b5-8a60-6961a17d1541}</Project>
       <Name>Dzielnik.Zasoby.Interfejsy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Inicjalizator\Dzielnik.Testy.Inicjalizator.stworzMocki\Dzielnik.Testy.Inicjalizator.stworzMocki.csproj">
+      <Project>{61611a89-9dc5-4192-9e55-386e7efe21c4}</Project>
+      <Name>Dzielnik.Testy.Inicjalizator.stworzMocki</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Model\Dzielnik.Testy.Model.stworzMocki\Dzielnik.Testy.Model.stworzMocki.csproj">
       <Project>{850E61C4-6F6B-475E-B11F-14F3D7EF2984}</Project>

@@ -1,0 +1,24 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:Widok="clr-namespace:Dzielnik.Widok.SelektorSzablonuKomorki">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="SzablonyKomorek/KomorkaImienia.xaml"/>
+        <ResourceDictionary Source="SzablonyKomorek/KomorkaListyKryteriumWyboru.xaml"/>
+        <ResourceDictionary Source="SzablonyKomorek/KomorkaListyRodzajuNaleznosci.xaml"/>
+        <ResourceDictionary Source="SzablonyKomorek/KomorkaNaleznejKwoty.xaml"/>
+        <ResourceDictionary Source="SzablonyKomorek/KomorkaPusta.xaml"/>
+        <ResourceDictionary Source="SzablonyKomorek/KomorkaWejsciowaImienia.xaml"/>
+        <ResourceDictionary Source="SzablonyKomorek/KomorkaWejsciowaKwoty.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Widok:SelektorSzablonuKomorki x:Key="SelektorSzablonuKomorki"
+                                   SzablonKomorkiImienia="{StaticResource KomorkaImienia}"
+                                   SzablonKomorkiListyKryteriumWyboru="{StaticResource KomorkaListyKryteriumWyboru}"
+                                   SzablonKomorkiListyRodzajuNaleznosci="{StaticResource KomorkaListyRodzajuNaleznosci}"
+                                   SzablonKomorkiNaleznejKwoty="{StaticResource KomorkaNaleznejKwoty}"
+                                   SzablonKomorkiPustej="{StaticResource KomorkaPusta}"
+                                   SzablonKomorkiWejsciowejImienia="{StaticResource KomorkaWejsciowaImienia}"
+                                   SzablonKomorkiWejsciowejKwoty="{StaticResource KomorkaWejsciowaKwoty}"/>
+
+</ResourceDictionary>

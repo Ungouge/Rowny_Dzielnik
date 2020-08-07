@@ -2,9 +2,9 @@
 using Dzielnik.Model.Interfejsy.ObliczaczTabeliNaleznosci;
 using Dzielnik.Model.Interfejsy.NajlepszaWymianaZnajdywacz;
 using Dzielnik.Model.Interfejsy.TablicaOsobKoncowaPrefabrykator;
+using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 using Dzielnik.Zasoby.Interfejsy.TabeleNaleznosci;
 using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
-using Dzielnik.Zasoby.Interfejsy.KryteriumWyboru;
 
 namespace Dzielnik.Model.ObliczaczTabeliNaleznosci
 {

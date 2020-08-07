@@ -3,6 +3,9 @@ using Dzielnik.Zasoby.Interfejsy.TablicaOsob;
 
 namespace Dzielnik.Model.Interfejsy
 {
+    /// <summary>
+    /// Interfejs modelu dzielnika przeznaczony dla uaktualniacz modelu.
+    /// </summary>
     public interface IModelDzielnikaDlaUaktualniaczModelu
     {
         /// <summary>

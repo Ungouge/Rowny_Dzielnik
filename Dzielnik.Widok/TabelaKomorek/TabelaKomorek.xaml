@@ -1,0 +1,19 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="KomorkaStyl.xaml"/>
+        <ResourceDictionary Source="SelektorSzablonuKomorki/SelektorSzablonuKomorki.xaml"/>
+        <ResourceDictionary Source="SzablonPaneluTabeli.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="ItemsControl" x:Key="TabelaKomorek">
+        
+        <Setter Property="ItemsSource" Value="{Binding TabelaKomorek}"/>
+        <Setter Property="ItemsPanel" Value="{StaticResource SzablonPaneluTabeli}"/>
+        <Setter Property="ItemTemplateSelector" Value="{StaticResource SelektorSzablonuKomorki}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource KomorkaStyl}"/>
+
+    </Style>
+
+</ResourceDictionary>

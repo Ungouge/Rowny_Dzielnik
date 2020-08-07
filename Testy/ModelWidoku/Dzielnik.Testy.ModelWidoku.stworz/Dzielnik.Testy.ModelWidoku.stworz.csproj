@@ -43,6 +43,15 @@
   <ItemGroup>
     <Compile Include="CzyMoznaObliczac\Stworz_CzyMoznaObliczacWkaznik.cs" />
     <Compile Include="Komendy\Stworz_ObliczKomenda.cs" />
+    <Compile Include="Komorki\adaptery\Stworz_KomorkaDolnotrojkatnaKwotyNaleznejAdapter.cs" />
+    <Compile Include="Komorki\adaptery\Stworz_KomorkaGornotrojkatnaKwotyNaleznejAdapter.cs" />
+    <Compile Include="Komorki\adaptery\Stworz_KomorkaWejsciowaImieniaAdapter.cs" />
+    <Compile Include="Komorki\adaptery\Stworz_KomorkaWejsciowaKwotyAdapter.cs" />
+    <Compile Include="Komorki\adaptery\Stworz_KomorkaWyjsciowaImieniaAdapter.cs" />
+    <Compile Include="Komorki\adaptery\Stworz_KomorkaDiagonalnaAdapter.cs" />
+    <Compile Include="Komorki\adaptowalne\Stworz_KomorkaImieniaINaleznosciWejscowej.cs" />
+    <Compile Include="Komorki\adaptowalne\Stworz_KomorkaKwotyNaleznej.cs" />
+    <Compile Include="Komorki\tabelaKomorek\Stworz_TabelaKomorek.cs" />
     <Compile Include="Konwertery\KomorkaNaOsoba\Stworz_KomorkaNaOsobaPienieznaWizytor.cs" />
     <Compile Include="Konwertery\NaleznoscNaString\Stworz_KonwerterNaleznoscNaStringProkurent.cs" />
     <Compile Include="Konwertery\NaleznoscNaString\Stworz_NaleznoscPienieznaNaStringKonwerter.cs" />
@@ -54,6 +63,10 @@
     <Compile Include="Uaktualniacz\Stworz_ModelUaktualniacz.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Inicjalizator\Dzielnik.Inicjalizator.Interfejsy\Dzielnik.Inicjalizator.Interfejsy.csproj">
+      <Project>{121003CA-351D-49D2-83DF-23CB8497ED5F}</Project>
+      <Name>Dzielnik.Inicjalizator.Interfejsy</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\ModelWidoku\Dzielnik.ModelWidoku.Interfejsy\Dzielnik.ModelWidoku.Interfejsy.csproj">
       <Project>{cfa82b7f-e015-487a-bcc9-4d618a7719c5}</Project>
       <Name>Dzielnik.ModelWidoku.Interfejsy</Name>
@@ -65,6 +78,10 @@
     <ProjectReference Include="..\..\..\Model\Dzielnik.Model.Interfejsy\Dzielnik.Model.Interfejsy.csproj">
       <Project>{FCC254EA-713A-4143-8BA4-3B0E5421A8CD}</Project>
       <Name>Dzielnik.Model.Interfejsy</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Zasoby\Dzielnik.Testy.Zasoby.stworzMocki\Dzielnik.Testy.Zasoby.stworzMocki.csproj">
+      <Project>{4AAA5A6C-644D-41FE-A644-324A367641D2}</Project>
+      <Name>Dzielnik.Testy.Zasoby.stworzMocki</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Zasoby\Dzielnik.Testy.Zasoby.stworz\Dzielnik.Testy.Zasoby.stworz.csproj">
       <Project>{fbabeeb5-9aa6-4fbf-9d00-e7698141aeac}</Project>

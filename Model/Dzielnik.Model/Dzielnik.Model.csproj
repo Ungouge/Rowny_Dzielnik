@@ -58,6 +58,15 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'modelWidoku %28testy i debug%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\modelWidoku %28testy i debug%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -69,65 +78,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CzyOsobyKwitaWeryfikator\CzyOsobyPieniezneKwitaWeryfikator.cs" />
     <Compile Include="DoStanuKwitaSumator\RozniceDoStanuKwitaNaleznosciPienieznychSumator.cs" />
-    <Compile Include="fabrykiX\FabrykaModelu\FabrykaModelu.cs" />
-    <Compile Include="fabrykiX\FabrykaModelu\interfejsy\IFabrykaDlaModelDzielnika.cs" />
-    <Compile Include="fabrykiX\FabrykaModelu\interfejsy\IFabrykaDlaObliczaczNaleznosci.cs" />
-    <Compile Include="fabrykiX\FabrykaModelu\interfejsy\IFabrykaDlaZnajdywaczNajlepszejWymianyNalezosci.cs" />
-    <Compile Include="fabrykiX\FabrykaModelu\interfejsy\IFabrykaModelu.cs" />
-    <Compile Include="fabrykiX\FabrykaModelu\Stworz\StworzStartowaTabelaNaleznosci.cs" />
-    <Compile Include="fabrykiX\FabrykaModelu\Stworz\StworzZnajdywaczNajlepszejWymianyNalezosci.cs" />
-    <Compile Include="fabrykiX\FabrykaModelu\Wartosci.cs" />
-    <Compile Include="fabrykiX\FabrykaModelu\Stworz\StworzCzyOsobyKwitaWeryfikator.cs" />
-    <Compile Include="fabrykiX\FabrykaModelu\WezObliczaczNaleznosci.cs" />
-    <Compile Include="fabrykiX\IFabrykaDlaOsobaNaleznoscObrotowa.cs" />
-    <Compile Include="fabrykiX\IFabrykaDlaOsobaNaleznosc.cs" />
-    <Compile Include="FabrykaModelu\FabrykaModelu.cs" />
-    <Compile Include="FabrykaModelu\stworz\stworzObliczaczTabeliNaleznosci\StworzObliczaczTabeliNaleznosciPienieznych.cs" />
-    <Compile Include="FabrykaModelu\stworz\stworzObliczaczTabeliNaleznosci\StworzObliczaczTabeliNaleznosciProkurent.cs" />
-    <Compile Include="FabrykaModelu\stworz\StworzStartowaTabelaNaleznosciPienieznej.cs" />
-    <Compile Include="FabrykaModelu\stworz\StworzZnajdywaczNajlepszejWymianyNalezosciPienieznej.cs" />
-    <Compile Include="FabrykaModelu\wartosci.cs" />
+    <Compile Include="Fabryki\fabrykaModelu\FabrykaModelu.cs" />
+    <Compile Include="Fabryki\FabrykaDlaNajlepszaWymianaZnajdywaczFasada\FabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada.cs" />
+    <Compile Include="Fabryki\fabrykaModelu\stworz\StworzNajlepszaWymianaNalezosciPienieznejZnajdywacz.cs" />
+    <Compile Include="Fabryki\fabrykaModelu\stworz\stworzObliczaczTabeliNaleznosci\StworzObliczaczTabeliNaleznosciPienieznych.cs" />
+    <Compile Include="Fabryki\fabrykaModelu\stworz\stworzObliczaczTabeliNaleznosci\StworzObliczaczTabeliNaleznosciProkurent.cs" />
+    <Compile Include="Fabryki\fabrykaModelu\stworz\stworzTabelaNaleznosci\StworzPolozenieWTabeliNaleznosci.cs" />
+    <Compile Include="Fabryki\fabrykaModelu\stworz\stworzTabelaNaleznosci\StworzStartowaTabelaNaleznosciPienieznej.cs" />
+    <Compile Include="Fabryki\fabrykaModelu\stworz\stworzTabelaNaleznosci\StworzTabelaNaleznosciPienieznejNull.cs" />
+    <Compile Include="Fabryki\fabrykaModelu\wartosci.cs" />
     <Compile Include="Fabryki\tabelaNaleznosci\FabrykaTabelaNalezosciPienieznej.cs" />
     <Compile Include="Fabryki\tabelaNaleznosci\FabrykaTabelaNalezosciPienieznejNull.cs" />
-    <Compile Include="InicjalizatorModelu.cs" />
-    <Compile Include="Interfejsy wewnetrzne\CzyOsobyKwitaWeryfikator\ICzyOsobyKwitaWeryfikator.cs" />
-    <Compile Include="Interfejsy wewnetrzne\CzyOsobyKwitaWeryfikator\ICzyOsobyPieniezneKwitaWeryfikator.cs" />
-    <Compile Include="Interfejsy wewnetrzne\Fabryki\dlaObliczaczNaleznosci\IFabrykaDlaObliczaczNaleznosci.cs" />
-    <Compile Include="Interfejsy wewnetrzne\Fabryki\dlaObliczaczNaleznosci\IFabrykaDlaObliczaczNaleznosciPienieznych.cs" />
-    <Compile Include="Interfejsy wewnetrzne\Fabryki\dlaZnajdywaczNajlepszejWymianyNalezosci\IFabrykaDlaZnajdywaczNajlepszejWymianyNalezosci.cs" />
-    <Compile Include="Interfejsy wewnetrzne\Fabryki\dlaZnajdywaczNajlepszejWymianyNalezosci\IFabrykaDlaZnajdywaczNajlepszejWymianyNalezosciPienieznej.cs" />
-    <Compile Include="Interfejsy wewnetrzne\Fabryki\IFabrykaModelu.cs" />
-    <Compile Include="Interfejsy wewnetrzne\Fabryki\IFabrykaDlaObliczaczTabeliNaleznosciProkurent.cs" />
-    <Compile Include="Interfejsy wewnetrzne\Fabryki\tabelaNalezosci\IFabrykaTabelaNalezosci.cs" />
+    <Compile Include="Inicjalizator\InicjalizatorModelu.cs" />
+    <Compile Include="Interfejsy wewnetrzne\Fabryki\fabrykaModelu\dlaModelu\IFabrykaDlaModelu.cs" />
+    <Compile Include="Interfejsy wewnetrzne\Fabryki\fabrykaModelu\dlaTabelaNaleznosciObliczacz\IFabrykaDlaTabelaNaleznosciObliczacz.cs" />
+    <Compile Include="Interfejsy wewnetrzne\Fabryki\fabrykaModelu\dlaTabelaNaleznosciObliczacz\IFabrykaDlaTabelaNaleznosciPienieznychObliczacz.cs" />
+    <Compile Include="Interfejsy wewnetrzne\Fabryki\fabrykaModelu\dlaNajlepszaWymianaZnajdywacz\IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywacz.cs" />
+    <Compile Include="Interfejsy wewnetrzne\Fabryki\fasadaDlaNajlepszaWymianaZnajdywacz\IFabrykaDlaNajlepszaWymianaNalezosciPienieznejZnajdywaczFasada.cs" />
+    <Compile Include="Interfejsy wewnetrzne\Fabryki\fabrykaModelu\IFabrykaModelu.cs" />
+    <Compile Include="Interfejsy wewnetrzne\Fabryki\fabrykaModelu\dlaObliczaczTabeliNaleznosci\IFabrykaDlaObliczaczTabeliNaleznosciProkurent.cs" />
+    <Compile Include="Interfejsy wewnetrzne\Fabryki\tabelaNalezosci\IFabrykaTabelaNalezosciBaza.cs" />
     <Compile Include="Interfejsy wewnetrzne\Fabryki\tabelaNalezosci\IFabrykaTabelaNalezosciPienieznej.cs" />
     <Compile Include="Interfejsy wewnetrzne\Fabryki\tabelaNalezosci\IFabrykaTabelaNalezosciPienieznejNull.cs" />
-    <Compile Include="Interfejsy wewnetrzne\NajlepszaWymianaZnajdywacz\najlepszaTabelaNaleznosciPienieznejZnajdywacz\INajlepszaTabelaNaleznosciZnajdywacz.cs" />
+    <Compile Include="Interfejsy wewnetrzne\NajlepszaWymianaZnajdywacz\INajlepszaWymianaNalezosciPienieznejZnajdywaczDlaObliczacz.cs" />
     <Compile Include="Interfejsy wewnetrzne\NajwiekszaMozliwaNaleznoscDoWymianyUstalacz\INajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz.cs" />
-    <Compile Include="Interfejsy wewnetrzne\ObliczaczTabeliNaleznosci\IObliczaczNaleznosci.cs" />
-    <Compile Include="Interfejsy wewnetrzne\ObliczaczTabeliNaleznosci\IObliczaczTabeliNaleznosciPienieznych.cs" />
+    <Compile Include="Interfejsy wewnetrzne\ObliczaczTabeliNaleznosci\ITabelaNaleznosciObliczacz.cs" />
+    <Compile Include="Interfejsy wewnetrzne\ObliczaczTabeliNaleznosci\ITabelaNaleznosciPienieznychObliczacz.cs" />
     <Compile Include="Interfejsy wewnetrzne\ObliczaczTabeliNaleznosci\IObliczaczTabeliNaleznosciProkurent.cs" />
-    <Compile Include="Interfejsy wewnetrzne\NajlepszaWymianaZnajdywacz\najlepszaWymianaNalezosciPienieznejZnajdywacz\IZnajdywaczNajlepszejWymianyNalezosc.cs" />
-    <Compile Include="Interfejsy wewnetrzne\NajlepszaWymianaZnajdywacz\najlepszaWymianaNalezosciPienieznejZnajdywacz\IZnajdywaczNajlepszejWymianyNalezosciPienieznej.cs" />
+    <Compile Include="Interfejsy wewnetrzne\NajlepszaWymianaZnajdywacz\INajlepszaWymianaNalezosciPienieznejZnajdywacz.cs" />
     <Compile Include="Interfejsy wewnetrzne\DoStanuKwitaSumator\IRozniceDoStanuKwitaNaleznosciPienieznychSumator.cs" />
-    <Compile Include="Interfejsy wewnetrzne\DoStanuKwitaSumator\IRozniceDoStanuKwitaNaleznosciSumator.cs" />
     <Compile Include="Interfejsy wewnetrzne\TabeleNaleznosci\ITabelaNaleznosci.cs" />
     <Compile Include="Interfejsy wewnetrzne\TabeleNaleznosci\tabelaNaleznosciPienieznej\ITabelaNaleznosciPienieznej.cs" />
     <Compile Include="Interfejsy wewnetrzne\TabeleNaleznosci\tabelaNaleznosciPienieznej\ITabelaNaleznosciPienieznejNull.cs" />
+    <Compile Include="ModelDzielnika\KryteriumWyboruTabeliNaleznosci.cs" />
     <Compile Include="ModelDzielnika\ModelDzielnika.cs" />
     <Compile Include="ModelDzielnika\ObliczTabeleNaleznosci.cs" />
     <Compile Include="ModelDzielnika\TablicaOsob.cs" />
     <Compile Include="ModelDzielnika\Uaktualnij.cs" />
     <Compile Include="ModelDzielnika\Wartosci.cs" />
-    <Compile Include="implementacje\ObliczaczNaleznosciPienieznych.cs" />
-    <Compile Include="Interfejsy wewnetrzne\NajlepszaWymianaZnajdywacz\najlepszaTabelaNaleznosciPienieznejZnajdywacz\INajlepszaTabelaNaleznosciPienieznejZnajdywacz.cs" />
-    <Compile Include="NajlepszaWymianaZnajdywacz\najlepszaTabelaNaleznosciPienieznejZnajdywacz\NajlepszaTabelaNaleznosciPienieznejZnajdywacz.cs" />
-    <Compile Include="NajlepszaWymianaZnajdywacz\najlepszaWymianaNalezosciPienieznejZnajdywacz\NajlepszaWymianaNalezosciPienieznejZnajdywacz.cs" />
+    <Compile Include="NajlepszaWymianaZnajdywacz\NajlepszaWymianaNalezosciPienieznejZnajdywacz.cs" />
+    <Compile Include="NajlepszaWymianaZnajdywacz\Znajdz.cs" />
     <Compile Include="NajwiekszaMozliwaNaleznoscDoWymianyUstalacz\NajwiekszaMozliwaNaleznoscPienieznaDoWymianyUstalacz.cs" />
-    <Compile Include="ObliczaczTabeliNaleznosci\ObliczaczTabeliNaleznosci.cs" />
-    <Compile Include="ObliczaczTabeliNaleznosci\ObliczaczTabeliNaleznosciPienieznych.cs" />
-    <Compile Include="ObliczaczTabeliNaleznosci\ObliczaczTabeliNaleznosciProkurent.cs" />
+    <Compile Include="ObliczaczTabeliNaleznosci\TabelaNaleznosciPienieznychObliczacz.cs" />
+    <Compile Include="ObliczaczTabeliNaleznosci\obliczaczTabeliNaleznosciProkurent\ObliczaczTabeliNaleznosciProkurent.cs" />
+    <Compile Include="ObliczaczTabeliNaleznosci\obliczaczTabeliNaleznosciProkurent\ObliczNaleznosci.cs" />
+    <Compile Include="ObliczaczTabeliNaleznosci\obliczaczTabeliNaleznosciProkurent\WezObliczaczTabeliNaleznosciPienieznych.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\DeklaracjaPrzyjazniTestow.cs" />
     <Compile Include="Interfejsy wewnetrzne\TablicaOsobKoncowaPrefabrykator\ITablicaOsobPienieznaKoncowaPrefabrykator.cs" />
@@ -135,6 +131,7 @@
     <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznejBaza\tenIndekstatorPolozenia.cs" />
     <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznejNull\DodajWymianeNalzenosciUaktualniajacKryterium.cs" />
     <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznejNull\TabelaNaleznosciPienieznejNull.cs" />
+    <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznejNull\tenIndekstatorPolozenia.cs" />
     <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznejNull\ZwrocLepszeKryterium.cs" />
     <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\DodajWymianeNalzenosciUaktualniajacKryterium.cs" />
     <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\TabelaNaleznosciPienieznej.cs" />
@@ -142,7 +139,6 @@
     <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\UstalWartoscWTabeliNaleznosci.cs" />
     <Compile Include="TabelaNaleznosci\tabelaNaleznosciPienieznej\ZwrocLepszeKryterium.cs" />
     <Compile Include="TablicaOsobKoncowaPrefabrykator\TablicaOsobPienieznaKoncowaPrefabrykator.cs" />
-    <Compile Include="ZnajdywaczNajlepszejWymiany\ZnajdywaczNajlepszejWymianyNalezosciPienieznej.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Inicjalizator\Dzielnik.Inicjalizator.Interfejsy\Dzielnik.Inicjalizator.Interfejsy.csproj">

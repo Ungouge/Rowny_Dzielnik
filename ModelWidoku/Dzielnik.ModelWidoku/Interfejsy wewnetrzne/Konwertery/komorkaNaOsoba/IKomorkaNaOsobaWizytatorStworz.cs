@@ -9,7 +9,7 @@ namespace Dzielnik.ModelWidoku.Interfejsy.Konwertery
     internal interface IKomorkaNaOsobaWizytatorStworz
     {
         /// <summary>
-        /// Tworzy osobe odpowiedniego typu wedlug implementacji wizytatora oraz typowi naleznosci.
+        /// Stworz osobe odpowiedniego typu wedlug implementacji wizytatora oraz typowi naleznosci.
         /// </summary>
         IOsobaTypSwiadczenia StworzOsoba(byte indeks, INaleznoscSwiadczenieBaza naleznosc);
     }

@@ -101,6 +101,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\DeklaracjaPrzyjazniTestow.cs" />
     <Compile Include="TabeleNaleznosci\Stworz_TabelaNaleznosciPienieznej_Mock.cs" />
+    <Compile Include="TabeleNaleznosci\Stworz_TabelaNaleznosciZwrotna_Mock.cs" />
     <Compile Include="TablicaOsobKoncowaPrefabrykator\Stworz_TablicaOsobKoncowaPrefabrykator_Mock.cs" />
   </ItemGroup>
   <ItemGroup>

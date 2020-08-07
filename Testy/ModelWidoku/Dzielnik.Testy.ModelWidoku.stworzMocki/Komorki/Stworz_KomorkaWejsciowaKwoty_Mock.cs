@@ -1,16 +1,21 @@
-﻿using Dzielnik.ModelWidoku.Interfejsy.Komorki;
+﻿using System.Windows.Media;
+
+using Dzielnik.ModelWidoku.Interfejsy.Komorki;
 
 using Moq;
 
 namespace Dzielnik.Testy.ModelWidoku.Komorki
 {
-    public static class Stworz_KomorkaWejsciowaKwoty_Mock
+    public static partial class Stworz_KomorkaWejsciowaKwoty_Mock
     {
         public static IKomorkaWejsciowaKwoty Stworz_Mock()
         {
-            Mock<IKomorkaWejsciowaKwoty> komorka_Mock = new Mock<IKomorkaWejsciowaKwoty>();
+            return GetKomorkaWejsciowaKwoty_Mock().Object;
+        }
 
-            return komorka_Mock.Object;
+        private static Mock<IKomorkaWejsciowaKwoty> GetKomorkaWejsciowaKwoty_Mock()
+        {
+            return new Mock<IKomorkaWejsciowaKwoty>();
         }
     }
 }

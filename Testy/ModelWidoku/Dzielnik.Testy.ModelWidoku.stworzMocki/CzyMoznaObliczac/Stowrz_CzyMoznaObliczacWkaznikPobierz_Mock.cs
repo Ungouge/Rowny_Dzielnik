@@ -11,5 +11,12 @@ namespace Dzielnik.Testy.ModelWidoku.CzyMoznaObliczac
 
             return czyMoznaObliczac_Mock.Object;
         }
+
+        internal static ICzyMoznaObliczacWkaznik Stworz_Mock(bool x)
+        {
+            Mock<ICzyMoznaObliczacWkaznik> wskaznik_Mock = new Mock<ICzyMoznaObliczacWkaznik>();
+
+            return wskaznik_Mock.Object;
+        }
     }
 }

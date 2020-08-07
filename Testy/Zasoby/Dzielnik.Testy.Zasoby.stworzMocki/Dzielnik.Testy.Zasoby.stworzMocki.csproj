@@ -79,6 +79,7 @@
     <Compile Include="Naleznosci\Stworz_NaleznoscSwiadczenieBaza_Mock.cs" />
     <Compile Include="Osoby\osobaID\Stworz_OsobaID_Moq.cs" />
     <Compile Include="Osoby\OsobaPieniezna\Stworz_OsobaPieniezna_Mock.cs" />
+    <Compile Include="Osoby\OsobaTypSwiadczenia\Stworz_OsobaTypSwiadczenia_Mock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TabelaNaleznosci\Stworz_PolozenieWTabeliNaleznosci_Mock.cs" />
     <Compile Include="TabliceOsob\Stworz_TablicaOsobPienieznych_Mock.cs" />

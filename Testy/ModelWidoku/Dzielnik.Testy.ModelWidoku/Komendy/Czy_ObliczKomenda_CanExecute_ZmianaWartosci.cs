@@ -29,8 +29,6 @@ namespace Dzielnik.Testy.ModelWidoku.Komendy
         private static void Czy_CanExecute_ZmianaWartosci_ZmieniaWartoscNa(bool czyPozwalam)
         {
             //Ustal
-            Mock<Action> naObliczKomendaAkcja = Stworz_ObliczKomendaAkcja_WeryfikalnyMock.Stworz_WeryfikalnyMock();
-
             ICzyMoznaObliczacWkaznik czyMoznaObliczacWkaznik = Stworz_CzyMoznaObliczacWkaznik.Stworz();
 
             IObliczKomenda komenda = Stworz_ObliczKomenda.Stworz(czyMoznaObliczacWkaznik);

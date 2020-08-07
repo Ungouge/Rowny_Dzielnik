@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Dzielnik.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="KryteriumWyboru" Type="Dzielnik.Zasoby.Interfejsy.KryteriumWyboru.KryteriumWyboruTabeliNaleznosciWylicznik" Scope="User">
+      <Value Profile="(Default)">KryteriumSumyWymienionejNaleznosci</Value>
+    </Setting>
+    <Setting Name="IloscOsob" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="RodzajNaleznosci" Type="Dzielnik.Zasoby.Wyliczniki.RodzajNaleznosciWylicznik" Scope="User">
+      <Value Profile="(Default)">NaleznoscPieniezna</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

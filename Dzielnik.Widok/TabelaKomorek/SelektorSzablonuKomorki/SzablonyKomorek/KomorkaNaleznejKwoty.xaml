@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="StyleISzablonyElementowKomorek/StyleISzablonyElementowKomorek.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <DataTemplate x:Key="KomorkaNaleznejKwoty">
+        <Border Style="{StaticResource GranicaKomorkiStyl}">
+            <TextBlock Style="{StaticResource TesktBlokKomorkiStyl}"/>
+        </Border>
+    </DataTemplate>
+
+</ResourceDictionary>

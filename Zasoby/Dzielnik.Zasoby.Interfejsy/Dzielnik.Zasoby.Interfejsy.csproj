@@ -57,6 +57,15 @@
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'modelWidoku %28testy i debug%29|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\modelWidoku %28testy i debug%29\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -72,13 +81,11 @@
     <Compile Include="Fabryki\kryteriaWyboru\IFabrykaKryteriumWyboruTabeliNaleznosciPienieznychNull.cs" />
     <Compile Include="Fabryki\naleznosci\IAbstrakcyjnaFabrykaNaleznosciDlaTabeliNaleznosci.cs" />
     <Compile Include="Fabryki\osoby\osobaPieniezna\IFabrykaOsobaPieniezna.cs" />
-    <Compile Include="Fabryki\tabelaNalezosci\IFabrykaTabelaNalezosci.cs" />
-    <Compile Include="Fabryki\tabelaNalezosci\IFabrykaTabelaNalezosciPienieznejNull.cs" />
-    <Compile Include="Fabryki\tabliceOsob\FabrykaTablicaOsobBaza.cs" />
+    <Compile Include="Fabryki\tabliceOsob\IFabrykaTablicaOsobBaza.cs" />
+    <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznej\IKryteriumWezWymienionejNaleznosciPienieznejBaza.cs" />
     <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznej\IKryteriumSumyWymienionejNaleznosciPienieznej.cs" />
     <Compile Include="KryteriumWyboru\kryteriumWyboruTabeliNaleznosciPienieznej\IKryteriumWyboruTabeliNaleznosciPienieznej.cs" />
-    <Compile Include="Naleznosci\bazowe\INaleznoscSwiadczenie.cs" />
-    <Compile Include="Osoby\abstrakcje\OsobaID.cs" />
+    <Compile Include="Naleznosci\bazowe\INaleznoscSwiadczenieBaza.cs" />
     <Compile Include="Fabryki\kryteriaWyboru\IAbstrakcyjnaFabrykaKryteriumWyboruTabeliNaleznosciPienieznych.cs" />
     <Compile Include="Fabryki\naleznosci\IFabrykaNaleznoscDiagonalna.cs" />
     <Compile Include="Fabryki\naleznosci\IFabrykaNaleznosci.cs" />
@@ -87,25 +94,20 @@
     <Compile Include="Fabryki\naleznosci\naleznoscPieniezna\IFabrykaNaleznoscPienieznaDiagonalna.cs" />
     <Compile Include="Fabryki\naleznosci\naleznoscPieniezna\IFabrykaNaleznoscPieniezna.cs" />
     <Compile Include="Fabryki\osoby\IFabrykaOsoba.cs" />
-    <Compile Include="Fabryki\tabelaNalezosci\IFabrykaTabelaNalezosciPienieznej.cs" />
     <Compile Include="Fabryki\tabliceOsob\tablicaOsobPieniezna\IFabrykaTablicaOsobPienieznych.cs" />
     <Compile Include="Fabryki\naleznosci\naleznoscPieniezna\IFabrykaNaleznoscPienieznaZerowa.cs" />
     <Compile Include="Osoby\IOsobaTypSwiadczenia.cs" />
-    <Compile Include="Osoby\IOsobaWymienna.cs" />
-    <Compile Include="Osoby\OsobaPieniezna\IOsobaPienieznaUstalWplata.cs" />
-    <Compile Include="Osoby\OsobaPieniezna\IOsobaPienieznaWymienna.cs" />
     <Compile Include="Osoby\OsobaPieniezna\IOsobaSwiadczeniePieniezne.cs" />
-    <Compile Include="PolozenieWTabeliKomorek\IPolozenieDolntrojkatneWTabeliKomorek.cs" />
-    <Compile Include="PolozenieWTabeliKomorek\IPolozenieGornotrojkatneWTabeliKomorek.cs" />
-    <Compile Include="PolozenieWTabeliKomorek\IPolozenieNaleznosciWTabeliKomorek.cs" />
-    <Compile Include="PolozenieWTabeliKomorek\IPolozenieWTabeliKomorek.cs" />
     <Compile Include="TabeleNaleznosci\ITabelaNaleznosciZwrotna.cs" />
-    <Compile Include="TablicaOsob\ITablicaOsobPienieznych\ITablicaOsobPienieznychWymienna.cs" />
-    <Compile Include="TablicaOsob\ITablicaOsobWymienna.cs" />
+    <Compile Include="TablicaOsob\ITablicaOsobBaza.cs" />
+    <Compile Include="TablicaOsob\ITablicaOsobIterowalna.cs" />
+    <Compile Include="TablicaOsob\ITablicaOsobPienieznych\ITablicaOsobPienieznychIterowalna.cs" />
+    <Compile Include="TablicaOsob\ITablicaOsobPienieznych\ITablicaOsobPienieznychPrzekazywalna.cs" />
+    <Compile Include="TablicaOsob\ITablicaOsobPienieznych\ITablicaOsobPienieznychZwrotna.cs" />
+    <Compile Include="TablicaOsob\ITablicaOsobZwrotna.cs" />
     <Compile Include="Wyjatki\ZlyTypNaleznosciWyjatek.cs" />
     <Compile Include="Wyliczniki\RodzajNaleznosciWylicznik.cs" />
-    <Compile Include="TabeleNaleznosci\ITabelaNaleznosci.cs" />
-    <Compile Include="TabeleNaleznosci\tabelaNaleznosciPienieznej\ITabelaNaleznosciPienieznej.cs" />
+    <Compile Include="TabeleNaleznosci\ITabelaNaleznosciBaza.cs" />
     <Compile Include="TabeleNaleznosci\polozenieWTabeliNaleznosci\IPolozenieGornotrojkatneWTabeliNaleznosci.cs" />
     <Compile Include="TabeleNaleznosci\polozenieWTabeliNaleznosci\IPolozenieWTabeliNaleznosci.cs" />
     <Compile Include="TabeleNaleznosci\tabelaNaleznosciPienieznej\ITabelaNaleznosciPienieznejZwrotna.cs" />
@@ -122,7 +124,10 @@
     <Compile Include="Osoby\OsobaPieniezna\IOsobaPieniezna.cs" />
     <Compile Include="Osoby\IOsobaID.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Zdarzenia\obliczonaTabelNaleznocsci\ObliczonaTabelaNaleznosci_ObslugaZdarzenia.cs" />
+    <Compile Include="Zdarzenia\ObliczonaTabelaNaleznosci_ArgumentZdarzenia.cs" />
+    <Compile Include="Zdarzenia\ustawienia\ZmianaUstawieniaIloscOsob_ArgumentyZdarzenia.cs" />
+    <Compile Include="Zdarzenia\ustawienia\ZmianaUstawieniaKryteriumWyboruTabeliNaleznosci_ArgumentyZdarzenia.cs" />
+    <Compile Include="Zdarzenia\ustawienia\ZmianaUstawieniaRodzajNaleznosciWylicznik_ArgumentyZdarzenia.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
